@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
 import HeaderGeneric from '../components/HeaderGeneric'
-import pic04 from '../assets/images/pic04.jpg'
+import who from '../assets/images/who.jpg'
 import Nav from '../components/Nav'
 
 class Generic extends React.Component {
@@ -14,18 +14,38 @@ class Generic extends React.Component {
       <Layout>
         <Nav sticky={true} />
         <header id="header">
-        <h1>Page Title</h1>
-        <p>Ipsum dolor sit amet nullam</p>
+        <h1>Who we are</h1>
+        <p>Discover Gnucoop Soc. Coop.</p>
     </header>
         <Helmet title="Who we are" />
         <div id="main">
           <section id="content" className="main">
-            <span className="image main"><img src={pic04} alt="" /></span>
-            <h2>Test feugiat lorem</h2>
-            <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-            <p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-            <h2>Tempus veroeros</h2>
-            <p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
+            <span className="image main"><img src={who} alt="" /></span>
+            <h2>COMPANY STATEMENT</h2>
+            <h3>Vision</h3>
+                Our vision is to make development projects more effective through the 
+                use of free software and sustainable technological solutions
+
+            <h3>Mission</h3>
+                We offer a combination of technical competencies with development skills, in order 
+                to give international cooperation projects a better chance to be successful.
+                We promote long-term partnerships with other organizations, to strengthen skills 
+                and provide technical services in the aid-for-development sector.
+                We belong to the Digital humanitarian network and actively participate in the 
+                international debate on the use of technology as aid supporting tool, linking up 
+                with the international network of aid worker and the international IT community.
+            <h3>Guiding principles</h3>
+                Innovation, quality and efficiency are necessary elements for the development of 
+                technology and the services that we make available through our work.
+                The constant support to our partners and clients from project planning to project 
+                development contributes to the successful achievement of their objectives.
+                Motivation, ability to work in a team and willingness to take over responsibilities 
+                are a guarantee for our successful performances.
+                Openness, mutual support as well as enjoyment of work for a common goal identify 
+                our company.
+                The young history, dynamism and flexibility of our organization make of its members 
+                the key elements to succeed as a cooperative and to help achieving the important 
+                objectives of the international development community.
           </section>
         </div>
       </Layout>

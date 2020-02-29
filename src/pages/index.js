@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Waypoint } from 'react-waypoint'
-import pic01 from '../assets/images/pic01.jpg'
+import pic01 from '../assets/images/gnumeditate.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -44,14 +44,19 @@ class Index extends React.Component {
                   <h2>Who we are</h2>
                 </header>
                 <p>
-                  Sed lorem ipsum dolor sit amet nullam consequat feugiat
-                  consequat magna adipiscing magna etiam amet veroeros. Lorem
-                  ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem
-                  ipsum dolor sit amet aliquam.
+                Gnucoop develops databases and web applications to help aid organisations 
+                to easily manage their information and data.
+                Gnucoop  started in 2006 as a small group of free-lance IT professionals 
+                with the idea that free software and technologies have great economical 
+                and technical advantages and they can provide  very useful tools to achieve 
+                Companies/Institutions/NGOs/Research Institutes/Aid Agencies’ objectives.
+                In 2012, we officially founded the Gnucoop Soc. Coop., in order to institutionalize 
+                our position and provide  a more comprehensive  and recognized expertise and support 
+                to our clients, particularly to non profit institutions
                 </p>
                 <ul className="actions">
                   <li>
-                    <Link to="/generic" className="button">
+                    <Link to="/who-we-are" className="button">
                       Learn More
                     </Link>
                   </li>
@@ -70,33 +75,37 @@ class Index extends React.Component {
             <ul className="features">
               <li>
                 <span className="icon major style1 fa-code"></span>
-                <h3>Ipsum consequat</h3>
+                <h3>Artificial Intelligence</h3>
                 <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
+                With Artificial Intelligence and Machine Learning we refer to software systems 
+                that can perform complex tasks typically associated with “human intelligence”. 
+                For example recognizing a face within a picture, understanding a question in 
+                natural language or taking decisions.
                 </p>
               </li>
               <li>
                 <span className="icon major style3 fa-copy"></span>
-                <h3>Amed sed feugiat</h3>
+                <h3>Blockchain</h3>
                 <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
+                Blockchain is a technology introduced in 2008 to manage a database of transactions 
+                (or a ledger) across a distributed network, assuring a robust and secure synchronization 
+                mechanism across nodes that allows to make digital resources impossible to duplicate.
                 </p>
               </li>
               <li>
                 <span className="icon major style5 fa-diamond"></span>
-                <h3>Dolor nullam</h3>
+                <h3>Offline first APP</h3>
                 <p>
-                  Sed lorem amet ipsum dolor et amet nullam consequat a feugiat
-                  consequat tempus veroeros sed consequat.
+                Gnucoop usually provides a native mobile application for all the major mobile 
+                operating systems (iOS, Android, Windows Phone) assuring a fast performance and 
+                a high degree of reliability.
                 </p>
               </li>
             </ul>
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="/how-we-can-help" className="button">
                     Learn More
                   </Link>
                 </li>

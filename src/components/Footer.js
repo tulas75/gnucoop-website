@@ -18,7 +18,7 @@ const Footer = props => (
       </p>
       <ul className="actions">
         <li>
-          <Link to="/generic" className="button">
+          <Link to="/who-we-are" className="button">
             Learn More
           </Link>
         </li>
