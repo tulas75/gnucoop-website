@@ -1,21 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import HeaderGeneric from '../components/HeaderGeneric'
-import pic01 from '../assets/images/pic01.jpg'
-import blog1 from '../assets/images/smwo_pic.jpg'
 import Nav from '../components/Nav'
 
-class Generic extends React.Component {
-  
-  render() {
-
-    return (
+    const BlogPage = ({ data }) => (
       <Layout>
         <Nav sticky={true} />
-        <Helmet title="Generic Page Title" />
+        <Helmet title="Blog & Articles" />
         <header id="header">
         <h1>Blog & Articles</h1>
         <p>News from us</p>
@@ -23,66 +18,41 @@ class Generic extends React.Component {
         <div id="main">
         <section class="main">
         <ul class="features">
-            <li>
-            <span className="main image "><img src={blog1} alt="" /></span>
-                <h3>Smart-Coop</h3>
+	  {data.allStrapiStuff.edges.map(document => (
+            <li key={document.node.id}>
+            <span className="main image"><Img fixed={document.node.feature_image.childImageSharp.fixed}/></span>
+                <h3>{document.node.title}</h3>
                 <ul class="actions">
                     <li>
-                        <a class="button" href="/post">Read more</a>
+                        <a class="button" href={`/${document.node.id}`}>Read more</a>
                     </li>
                 </ul>
             </li>
-            <li>
-            <span className="main image "><img src={pic01} alt="" /></span>
-                <h3>Ipsum consequat</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href="/post">Read more</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-            <span className="main image "><img src={pic01} alt="" /></span>
-                <h3>Ipsum consequat</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href="/post">Read more</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-            <span className="main image "><img src={pic01} alt="" /></span>
-                <h3>Ipsum consequat</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href="/post">Read more</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-            <span className="main image "><img src={pic01} alt="" /></span>
-                <h3>Ipsum consequat</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href="/post">Read more</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-            <span className="main image "><img src={pic01} alt="" /></span>
-                <h3>Ipsum consequat</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href="/post">Read more</a>
-                    </li>
-                </ul>
-            </li>
+	  ))}
         </ul>
 		</section>
         </div>
       </Layout>
     )
-  }
-}
 
-export default Generic
+export default BlogPage 
+
+export const pageQuery = graphql`
+  query BlogQuery {
+    allStrapiStuff {
+      edges {
+        node {
+          id
+	  feature_image {
+	      childImageSharp {
+              fixed(width: 300, height: 200) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+	  }
+          title
+        }
+      }
+    }
+  }
+`

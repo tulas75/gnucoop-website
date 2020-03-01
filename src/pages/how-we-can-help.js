@@ -15,7 +15,7 @@ class Generic extends React.Component {
         <Nav sticky={true} />
         <header id="header">
         <h1>How we can help</h1>
-        <p>Ipsum dolor sit amet nullam</p>
+        <p>Sectors of intervention</p>
     </header>
         <Helmet title="Who we are" />
         <div id="main">

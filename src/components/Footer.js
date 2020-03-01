@@ -32,7 +32,7 @@ const Footer = props => (
         <dt>Phone</dt>
         <dd>(000) 370-3309574</dd>
         <dt>Address</dt>
-        <dd>Lungarno Mediceo &bull; Pisa, 56127 &bull; ITALY</dd>
+        <dd>Lungarno Mediceo 56 &bull; Pisa, 56127 &bull; ITALY</dd>
         <dt>Phone</dt>
         <dd>(000) 370-31309574</dd>
         <dt>Email</dt>
@@ -70,7 +70,7 @@ const Footer = props => (
       </ul>
     </section>
     <p className="copyright">
-      &copy; Gnucoop Soc. Coop. Definetely inspired by Design: <a href="https://html5up.net">HTML5 UP</a>.
+      &copy; Gnucoop Soc. Coop. Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
     </p>
   </footer>
 )
