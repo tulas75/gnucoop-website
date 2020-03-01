@@ -19,7 +19,7 @@ const StuffTemplate = ({ data }) => (
 	  <ReactMarkdown source={data.strapiStuff.Content} />
 	<br/>
 	<br/>
-<a class="button special">TAG1</a>  <a class="button">TAG2</a> <a class="button">TAG3</a> 
+	{data.strapiStuff.tags.tag}
           </section>
         </div>
       </Layout>
@@ -28,17 +28,21 @@ const StuffTemplate = ({ data }) => (
 export default StuffTemplate
 
 export const query = graphql`
-  query StuffTemplate($id: String!) {
-    strapiStuff(id: {eq: $id}) {
+  query StuffTemplate($slug: String) {
+    strapiStuff(slug: {eq: $slug}) {
       title
       Content
       header_image {
           childImageSharp {
-            fluid(maxWidth: 960) {
+            fluid(maxHeight: 450) {
               ...GatsbyImageSharpFluid
             }
           }
         }
+      slug
+      tags {
+	      tag
+	}
     }
   }
 `

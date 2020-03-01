@@ -21,12 +21,7 @@ import Nav from '../components/Nav'
 	  {data.allStrapiStuff.edges.map(document => (
             <li key={document.node.id}>
             <span className="main image"><Img fixed={document.node.feature_image.childImageSharp.fixed}/></span>
-                <h3>{document.node.title}</h3>
-                <ul class="actions">
-                    <li>
-                        <a class="button" href={`/${document.node.id}`}>Read more</a>
-                    </li>
-                </ul>
+                <a class="button" href={`/${document.node.slug}`}>{document.node.title}</a>
             </li>
 	  ))}
         </ul>
@@ -39,7 +34,7 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allStrapiStuff {
+    allStrapiStuff(filter: {category: {category: {eq: "Blog"}}}) {
       edges {
         node {
           id
@@ -51,8 +46,10 @@ export const pageQuery = graphql`
             }
 	  }
           title
-        }
+     	  slug
+	  published
       }
+    }
     }
   }
 `

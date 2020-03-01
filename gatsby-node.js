@@ -29,10 +29,10 @@ exports.createPages = ({ actions, graphql }) => {
   
   const getStuffs = makeRequest(graphql, `
     {
-      allStrapiStuff {
+      allStrapiStuff (filter: {category: {category: {eq: "Blog"}}}) {
         edges {
           node {
-            id
+           slug 
           }
         }
       }
@@ -41,15 +41,27 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiStuff.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.id}`,
+        path: `/${node.slug}`,
         component: path.resolve(`src/templates/post.js`),
         context: {
-          id: node.id,
+          slug: node.slug,
         },
       })
     })
   });
-  
+
+const { createFilePath } = require(`gatsby-source-filesystem`)
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
+  if (node.internal.type === `MarkdownRemark`) {
+    const slug = createFilePath({ node, getNode, basePath: `blog` })
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+} 
   // Query for articles nodes to use in creating pages.
   return getStuffs;
 };

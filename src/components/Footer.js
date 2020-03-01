@@ -30,11 +30,11 @@ const Footer = props => (
         <dt>Address</dt>
         <dd>via Stefanardo da Vimercate 28 &bull; <br/>Milano, 20128 &bull; ITALY</dd>
         <dt>Phone</dt>
-        <dd>(000) 370-3309574</dd>
+        <dd>(+39) 370-3309574</dd>
         <dt>Address</dt>
         <dd>Lungarno Mediceo 56 &bull; Pisa, 56127 &bull; ITALY</dd>
         <dt>Phone</dt>
-        <dd>(000) 370-31309574</dd>
+        <dd>(+39) 370-3173931</dd>
         <dt>Email</dt>
         <dd>
           <a href="mailto:info@gnucoop.com">info@gnucoop.com</a>
@@ -55,7 +55,7 @@ const Footer = props => (
           </a>
         </li>
         <li>
-          <a href="https://instagram.com/gnucoopsoccoop" className="icon fa-instagram alt">
+          <a href="https://instagram.com/gnucoop_soc_coop" className="icon fa-instagram alt">
             <span className="label">Instagram</span>
           </a>
         </li>
