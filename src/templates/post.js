@@ -5,6 +5,8 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import HeaderGeneric from '../components/HeaderGeneric'
 import Nav from '../components/Nav'
+import ReactMarkdown from "react-markdown"  
+import Moment from "react-moment"
 
 const StuffTemplate = ({ data }) => (
       <Layout>
@@ -14,7 +16,7 @@ const StuffTemplate = ({ data }) => (
           <section id="content" className="main">
           <span className="main image "><Img fluid={data.strapiStuff.header_image.childImageSharp.fluid}/></span>
           <h1>{data.strapiStuff.title}</h1>
-	  {data.strapiStuff.Content}
+	  <ReactMarkdown source={data.strapiStuff.Content} />
 	<br/>
 	<br/>
 <a class="button special">TAG1</a>  <a class="button">TAG2</a> <a class="button">TAG3</a> 
