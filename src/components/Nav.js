@@ -28,7 +28,7 @@ const Nav = (props) => (
             </Link>
             </li>
             <li>
-                <Link to="#" type="id" element="cta">
+                <Link to="/products" type="id" element="cta">
                     Products
                 </Link>
             </li>
@@ -38,13 +38,8 @@ const Nav = (props) => (
                 </Link>
             </li>
             <li>
-                <Link to="#" type="id" element="cta">
+                <Link to="/training" type="id" element="cta">
                     Training
-                </Link>
-            </li>
-            <li>
-                <Link to="#" type="id" element="cta">
-                    Contact
                 </Link>
             </li>
         </Scrollspy>

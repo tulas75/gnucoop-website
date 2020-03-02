@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 import { Waypoint } from 'react-waypoint'
-import pic01 from '../assets/images/gnumeditate.png'
+import gnu from '../assets/images/gnumeditate.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -63,7 +63,7 @@ class Index extends React.Component {
                 </ul>
               </div>
               <span className="image">
-                <img src={pic01} alt="" />
+                <img src={gnu} alt="" />
               </span>
             </div>
           </section>
@@ -159,7 +159,7 @@ class Index extends React.Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="/how-we-can-help" className="button">
                     Learn More
                   </Link>
                 </li>
@@ -169,22 +169,20 @@ class Index extends React.Component {
 
           <section id="cta" className="main special">
             <header className="major">
-              <h2>Congue imperdiet</h2>
+              <h2>Gnucoop Acadamy</h2>
               <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue
-                <br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
+	    	Education is the most powerful weapon which you can use to change the world...
               </p>
             </header>
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="/generic" className="button special">
+                  <Link to="https://academy.gnucoop.com" className="button special">
                     Get Started
                   </Link>
                 </li>
                 <li>
-                  <Link to="/generic" className="button">
+                  <Link to="/training" className="button">
                     Learn More
                   </Link>
                 </li>

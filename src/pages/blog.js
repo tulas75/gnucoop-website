@@ -20,8 +20,9 @@ import Nav from '../components/Nav'
         <ul class="features">
 	  {data.allStrapiStuff.edges.map(document => (
             <li key={document.node.id}>
-            <span className="main image"><Img fixed={document.node.feature_image.childImageSharp.fixed}/></span>
-                <a class="button" href={`/${document.node.slug}`}>{document.node.title}</a>
+            <span className="main image"><Img fixed={document.node.feature_image.childImageSharp.fixed}/>
+            </span>
+                <a href={`/${document.node.slug}`}>{document.node.title}</a>
             </li>
 	  ))}
         </ul>
@@ -47,7 +48,6 @@ export const pageQuery = graphql`
 	  }
           title
      	  slug
-	  published
       }
     }
     }
