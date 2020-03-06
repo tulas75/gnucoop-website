@@ -20,7 +20,7 @@
 		}
 
 		&.alt {
-			@include padding(6em, 5em, (1em, 0, 0, 0));
+			@include padding(3em, 5em, (1em, 0, 0, 0));
 
 			h1 {
 				font-size: 3.25em;
@@ -39,12 +39,12 @@
 				));
 				@include vendor('transition-delay', '0s');
 				display: block;
-				/*margin: 0 0 (_size(element-margin) * 0.75) 0;*/
+				margin: 0 0 (_size(element-margin) * 0.05) 0;
 
 				img {
 					display: block;
 					margin: 0 auto;
-					max-width: 10%;
+					max-width: 16%;
 				}
 			}
 		}

@@ -29,7 +29,7 @@ const Nav = (props) => (
             </li>
             <li>
                 <Link to="/products" type="id" element="cta">
-                    Products
+                   Solutions 
                 </Link>
             </li>
             <li>

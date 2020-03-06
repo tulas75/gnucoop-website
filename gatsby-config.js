@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Starter - Stellar by HTML5 UP",
-    author: "Hunter Chang",
-    description: "A Gatsby.js Starter based on Stellar by HTML5 UP"
+    title: "gnucoop.com website",
+    author: "Gnucoop",
+    description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,23 +14,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
-      },
-    },
-    {
       resolve: 'gatsby-source-strapi',
       options: {
         //apiURL: 'https://aqueous-ridge-60181.herokuapp.com',
-	//apiURL: 'http://localhost:1337',
-	apiURL: 'http://34.65.138.187',
+	apiURL: 'http://localhost:1337',
+	//apiURL: 'http://34.65.138.187',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'stuff',
         ],
@@ -42,11 +30,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Gnucoop website',
+        short_name: 'GnucoopWeb',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#20547f',
+        theme_color: '#20547f',
         display: 'minimal-ui',
         icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
