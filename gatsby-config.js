@@ -16,11 +16,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        //apiURL: 'https://aqueous-ridge-60181.herokuapp.com',
-	apiURL: 'http://localhost:1337',
-	//apiURL: 'http://34.65.138.187',
+        apiURL: 'https://webdata.gnucoop.io',
+	      // apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
-          'stuff',
+          'articles',
+          'knowledges',
+          'partners',
+          'products',
+          'projects',
+          'solutions',
+          'team',
+          'training',
         ],
         queryLimit: 1000,
       },
