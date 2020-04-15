@@ -7,42 +7,44 @@ import HeaderGeneric from '../components/HeaderGeneric'
 import Nav from '../components/Nav'
 import ReactMarkdown from "react-markdown"  
 
-const StuffTemplate = ({ data }) => (
-      <Layout>
-        <Nav sticky={true} />
-        <Helmet title="Blog & Articles" />
-        <div id="main">
-          <section id="content" className="main">
-          <span className="main image "><Img fluid={data.strapiStuff.header_image.childImageSharp.fluid}/></span>
-          <h1>{data.strapiStuff.title}</h1>
-	  <ReactMarkdown source={data.strapiStuff.Content} />
-	<br/>
-	<br/>
-	{data.strapiStuff.tags.tag}
-	<a class="button special">TAGS:</a> LISTA DEI TAG
-          </section>
-        </div>
-      </Layout>
+const ArticleTemplate = ({ data }) => (
+  <Layout>
+    <Nav sticky={true} />
+    <Helmet title="Blog & Articles" />
+    <div id="main">
+      <section id="content" className="main">
+        <span className="main image ">
+          <Img fluid={data.strapiArticles.header_image.childImageSharp.fluid}/>
+        </span>
+        <h1>{data.strapiArticles.title}</h1>
+	      <ReactMarkdown source={data.strapiArticles.Content} />
+	      <br/>
+	      <br/>
+	      {data.strapiArticles.tags.tag}
+	      <a class="button special">TAGS:</a> LISTA DEI TAG
+      </section>
+    </div>
+  </Layout>
 )
 
-export default StuffTemplate
+export default ArticleTemplate
 
 export const query = graphql`
-  query StuffTemplate($slug: String) {
-    strapiStuff(slug: {eq: $slug}) {
+  query ArticleTemplate($slug: String) {
+    strapiArticles(slug: {eq: $slug}) {
       title
       Content
       header_image {
-          childImageSharp {
-            fluid(maxHeight: 450) {
-              ...GatsbyImageSharpFluid
-            }
+        childImageSharp {
+          fluid(maxHeight: 450) {
+            ...GatsbyImageSharpFluid
           }
         }
+      }
       slug
       tags {
 	      tag
-	}
+	    }
     }
   }
 `
