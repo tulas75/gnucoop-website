@@ -44,11 +44,11 @@ const TeamPage = ({ data }) => (
           {data.allStrapiTeam.edges.map(team => (
             <li key={team.node.id}>
               <span className="main image">
-                <Img fixed={team.node.feature_image.childImageSharp.fixed}/>
+                <Img fixed={team.node.ImageProfile.childImageSharp.fixed}/>
               </span>
-              <strong>{team.node.title}</strong>
+              <strong>{team.node.Name}</strong>
               <br/>
-              {team.node.excerpt}
+              {team.node.Description}
             </li>
           ))}
         </ul>
@@ -61,14 +61,13 @@ export default TeamPage
 
 export const pageQuery = graphql`
   query TeamQuery {
-    allStrapiTeam() {
+    allStrapiTeam {
       edges {  
         node {
           id
-          title
-          excerpt
-          Slug
-          feature_image {
+          Name
+          Description
+          ImageProfile {
             childImageSharp {
               fixed(width: 260, height: 260) {
                 ...GatsbyImageSharpFixed

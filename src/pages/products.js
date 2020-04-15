@@ -24,11 +24,11 @@ const ProductPage = ({ data }) => (
           {data.allStrapiPrtoducts.edges.map(product => (
             <li key={product.node.id}>
               <span className="main image">
-                <Img fixed={product.node.feature_image.childImageSharp.fixed}/>
+                <Img fixed={product.node.FeatureImage.childImageSharp.fixed}/>
               </span>
-              <strong>{product.node.title}</strong>
+              <strong>{product.node.Product}</strong>
               <br/>
-              {product.node.excerpt}
+              {product.node.Excerpt}
             </li>
           ))}
         </ul>
@@ -41,14 +41,13 @@ export default ProductPage
 
 export const pageQuery = graphql`
   query ProductQuery {
-    allStrapiProducts() {
+    allStrapiProducts {
       edges {	
 	      node {
-		      id
-		      title
-		      excerpt
-	      	Slug
-          feature_image {
+          id
+          Product
+		      Excerpt
+          FeatureImage {
             childImageSharp {
               fixed(width: 260, height: 260) {
                 ...GatsbyImageSharpFixed

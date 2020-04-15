@@ -24,11 +24,11 @@ const TrainingPage = ({ data }) => (
           {data.allStrapiTraining.edges.map(training => (
             <li key={training.node.id}>
               <span className="main image">
-                <Img fixed={training.node.feature_image.childImageSharp.fixed}/>
+                <Img fixed={training.node.FeatureImage.childImageSharp.fixed}/>
               </span>
-              <strong>{training.node.title}</strong>
+              <strong>{training.node.Training}</strong>
               <br/>
-              {training.node.excerpt}
+              {training.node.Excerpt}
             </li>
           ))}
         </ul>
@@ -41,14 +41,14 @@ export default TrainingPage
 
 export const pageQuery = graphql`
   query TrainingQuery {
-    allStrapiTraining() {
+    allStrapiTraining {
       edges {  
         node {
           id
-          title
-          excerpt
+          Training
+          Excerpt
           Slug
-          feature_image {
+          FeatureImage {
             childImageSharp {
               fixed(width: 260, height: 260) {
                 ...GatsbyImageSharpFixed

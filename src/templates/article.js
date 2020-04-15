@@ -14,13 +14,13 @@ const ArticleTemplate = ({ data }) => (
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
-          <Img fluid={data.strapiArticles.header_image.childImageSharp.fluid}/>
+          <Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>
         </span>
-        <h1>{data.strapiArticles.title}</h1>
+        <h1>{data.strapiArticles.Title}</h1>
 	      <ReactMarkdown source={data.strapiArticles.Content} />
 	      <br/>
 	      <br/>
-	      {data.strapiArticles.tags.tag}
+	      {data.strapiArticles.Tags.tag}
 	      <a class="button special">TAGS:</a> LISTA DEI TAG
       </section>
     </div>
@@ -32,9 +32,9 @@ export default ArticleTemplate
 export const query = graphql`
   query ArticleTemplate($Slug: String) {
     strapiArticles(Slug: {eq: $Slug}) {
-      title
+      Title
       Content
-      header_image {
+      FeatureImage {
         childImageSharp {
           fluid(maxHeight: 450) {
             ...GatsbyImageSharpFluid
@@ -42,7 +42,7 @@ export const query = graphql`
         }
       }
       Slug
-      tags {
+      Tags {
 	      tag
 	    }
     }
