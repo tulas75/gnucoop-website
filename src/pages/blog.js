@@ -23,7 +23,7 @@ const BlogPage = ({ data }) => (
               <span className="main image">
                 <Img fixed={article.node.feature_image.childImageSharp.fixed}/>
               </span>
-              <a href={`/${article.node.slug}`}>{article.node.title}</a>
+              <a href={`/${article.node.Slug}`}>{article.node.title}</a>
             </li>
           ))}
         </ul>
@@ -48,7 +48,7 @@ export const pageQuery = graphql`
             }
           }
           title
-     	    slug
+     	    Slug
         }
       }
     }

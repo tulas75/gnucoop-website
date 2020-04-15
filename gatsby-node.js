@@ -31,7 +31,7 @@ exports.createPages = ({ actions, graphql }) => {
       allStrapiArticles {
         edges {
           node {
-            slug
+            Slug
           }
         }
       }
@@ -40,10 +40,10 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticles.edges.forEach(({ node }) => {
       createPage({
-        path: `/${node.slug}`,
+        path: `/${node.Slug}`,
         component: path.resolve(`src/templates/article.js`),
         context: {
-          slug: node.slug,
+          Slug: node.Slug,
         },
       })
     })
@@ -53,11 +53,11 @@ exports.createPages = ({ actions, graphql }) => {
   exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
     if (node.internal.type === `MarkdownRemark`) {
-      const slug = createFilePath({ node, getNode, basePath: `blog` })
+      const Slug = createFilePath({ node, getNode, basePath: `blog` })
       createNodeField({
         node,
-        name: `slug`,
-        value: slug,
+        name: `Slug`,
+        value: Slug,
       })
     }
   } 

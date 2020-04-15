@@ -30,8 +30,8 @@ const ArticleTemplate = ({ data }) => (
 export default ArticleTemplate
 
 export const query = graphql`
-  query ArticleTemplate($slug: String) {
-    strapiArticles(slug: {eq: $slug}) {
+  query ArticleTemplate($Slug: String) {
+    strapiArticles(Slug: {eq: $Slug}) {
       title
       Content
       header_image {
@@ -41,7 +41,7 @@ export const query = graphql`
           }
         }
       }
-      slug
+      Slug
       tags {
 	      tag
 	    }

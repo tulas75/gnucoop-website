@@ -47,7 +47,7 @@ export const pageQuery = graphql`
           id
           title
           excerpt
-          slug
+          Slug
           feature_image {
             childImageSharp {
               fixed(width: 260, height: 260) {
