@@ -5,18 +5,17 @@
  */
 
 // You can delete this file if you're not using it
-//
 
 const path = require(`path`);
 
 const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
-  // Query for nodes to use in creating pages.
+  // Query for article nodes to use in creating pages.
   resolve(
     graphql(request).then(result => {
       if (result.errors) {
         reject(result.errors)
       }
-      
+
       return result;
     })
   )
@@ -26,23 +25,23 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
 // data layer is bootstrapped to let plugins create pages from data.
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
-  
-  const getStuffs = makeRequest(graphql, `
+
+  const getArticles = makeRequest(graphql, `
     {
-      allStrapiStuff (filter: {category: {category: {eq: "Blog"}}}) {
+      allStrapiArticles {
         edges {
           node {
-           slug 
+            slug
           }
         }
       }
     }
     `).then(result => {
     // Create pages for each article.
-    result.data.allStrapiStuff.edges.forEach(({ node }) => {
+    result.data.allStrapiArticles.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.slug}`,
-        component: path.resolve(`src/templates/post.js`),
+        component: path.resolve(`src/templates/article.js`),
         context: {
           slug: node.slug,
         },
@@ -50,18 +49,18 @@ exports.createPages = ({ actions, graphql }) => {
     })
   });
 
-const { createFilePath } = require(`gatsby-source-filesystem`)
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `blog` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-} 
+  const { createFilePath } = require(`gatsby-source-filesystem`)
+  exports.onCreateNode = ({ node, getNode, actions }) => {
+    const { createNodeField } = actions
+    if (node.internal.type === `MarkdownRemark`) {
+      const slug = createFilePath({ node, getNode, basePath: `blog` })
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+      })
+    }
+  } 
   // Query for articles nodes to use in creating pages.
-  return getStuffs;
+  return getArticles;
 };
