@@ -44,7 +44,8 @@ const TeamPage = ({ data }) => (
           {data.allStrapiTeam.edges.map(team => (
             <li key={team.node.id}>
               <span className="main image">
-                <Img fixed={team.node.ImageProfile.childImageSharp.fixed}/>
+                {/*<Img fixed={team.node.ImageProfile.childImageSharp.fixed}/>*/}
+                [todo: profile image]
               </span>
               <strong>{team.node.Name}</strong>
               <br/>

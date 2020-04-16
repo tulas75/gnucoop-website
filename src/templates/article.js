@@ -14,14 +14,15 @@ const ArticleTemplate = ({ data }) => (
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
-          <Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>
+          {/*<Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>*/}
+          [todo: feature image]
         </span>
         <h1>{data.strapiArticles.Title}</h1>
 	      <ReactMarkdown source={data.strapiArticles.Content} />
 	      <br/>
 	      <br/>
-	      {data.strapiArticles.Tags.tag}
-	      <a class="button special">TAGS:</a> LISTA DEI TAG
+	      {/*data.strapiArticles.tags.tag*/}
+	      <a class="button special">TAGS:</a> [todo: lista dei tags]
       </section>
     </div>
   </Layout>
@@ -42,7 +43,7 @@ export const query = graphql`
         }
       }
       Slug
-      Tags {
+      tags {
 	      tag
 	    }
     }

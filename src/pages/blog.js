@@ -21,7 +21,8 @@ const BlogPage = ({ data }) => (
           {data.allStrapiArticles.edges.map(article => (
             <li key={article.node.id}>
               <span className="main image">
-                <Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>
+                {/*<Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>*/}
+                [todo: feature image]
               </span>
               <a href={`/${article.node.Slug}`}>{article.node.Title}</a>
             </li>
