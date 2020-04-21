@@ -44,15 +44,15 @@ class Index extends React.Component {
                   <h2>Who we are</h2>
                 </header>
                 <p>
-                Gnucoop develops databases and web applications to help aid organisations 
-                to easily manage their information and data.
-                Gnucoop  started in 2006 as a small group of free-lance IT professionals 
-                with the idea that free software and technologies have great economical 
-                and technical advantages and they can provide  very useful tools to achieve 
-                Companies/Institutions/NGOs/Research Institutes/Aid Agencies’ objectives.
-                In 2012, we officially founded the Gnucoop Soc. Coop., in order to institutionalize 
-                our position and provide  a more comprehensive  and recognized expertise and support 
-                to our clients, particularly to non profit institutions
+                  Gnucoop develops databases and web applications to help aid organisations
+                  to easily manage their information and data.
+                  Gnucoop  started in 2006 as a small group of free-lance IT professionals
+                  with the idea that free software and technologies have great economical
+                  and technical advantages and they can provide  very useful tools to achieve
+                  Companies/Institutions/NGOs/Research Institutes/Aid Agencies’ objectives.
+                  In 2012, we officially founded the Gnucoop Soc. Coop., in order to institutionalize
+                  our position and provide  a more comprehensive  and recognized expertise and support
+                  to our clients, particularly to non profit institutions
                 </p>
                 <ul className="actions">
                   <li>
@@ -77,28 +77,28 @@ class Index extends React.Component {
                 <span className="icon major style1 fa-code"></span>
                 <h3>Artificial Intelligence</h3>
                 <p>
-                With Artificial Intelligence and Machine Learning we refer to software systems 
-                that can perform complex tasks typically associated with “human intelligence”. 
-                For example recognizing a face within a picture, understanding a question in 
-                natural language or taking decisions.
+                  With Artificial Intelligence and Machine Learning we refer to software systems
+                  that can perform complex tasks typically associated with “human intelligence”.
+                  For example recognizing a face within a picture, understanding a question in
+                  natural language or taking decisions.
                 </p>
               </li>
               <li>
                 <span className="icon major style3 fa-copy"></span>
                 <h3>Blockchain</h3>
                 <p>
-                Blockchain is a technology introduced in 2008 to manage a database of transactions 
-                (or a ledger) across a distributed network, assuring a robust and secure synchronization 
-                mechanism across nodes that allows to make digital resources impossible to duplicate.
+                  Blockchain is a technology introduced in 2008 to manage a database of transactions
+                  (or a ledger) across a distributed network, assuring a robust and secure synchronization
+                  mechanism across nodes that allows to make digital resources impossible to duplicate.
                 </p>
               </li>
               <li>
                 <span className="icon major style5 fa-diamond"></span>
                 <h3>Offline first APP</h3>
                 <p>
-                Gnucoop usually provides a native mobile application for all the major mobile 
-                operating systems (iOS, Android, Windows Phone) assuring a fast performance and 
-                a high degree of reliability.
+                  Gnucoop usually provides a native mobile application for all the major mobile
+                  operating systems (iOS, Android, Windows Phone) assuring a fast performance and
+                  a high degree of reliability.
                 </p>
               </li>
             </ul>
@@ -125,11 +125,11 @@ class Index extends React.Component {
             <ul className="statistics">
               <li className="style1">
                 <span className="icon fa-code-fork"></span>
-                <strong> UNHCR</strong> Data collection in refugee Camps 
+                <strong> UNHCR</strong> Data collection in refugee Camps
               </li>
               <li className="style2">
                 <span className="icon fa-folder-open-o"></span>
-                <strong>CIAI</strong> Cheese2School for School Attendance 
+                <strong>CIAI</strong> Cheese2School for School Attendance
               </li>
               <li className="style3">
                 <span className="icon fa-signal"></span>
@@ -137,7 +137,7 @@ class Index extends React.Component {
               </li>
               <li className="style4">
                 <span className="icon fa-laptop"></span>
-                <strong>CBM</strong>Data collection for visual impaired 
+                <strong>CBM</strong>Data collection for visual impaired
               </li>
               <li className="style5">
                 <span className="icon fa-diamond"></span>
@@ -171,7 +171,7 @@ class Index extends React.Component {
             <header className="major">
               <h2>Gnucoop Acadamy</h2>
               <p>
-	    	Education is the most powerful weapon which you can use to change the world...
+                Education is the most powerful weapon which you can use to change the world...
               </p>
             </header>
             <footer className="major">

@@ -28,7 +28,7 @@ const BlogPage = ({ data }) => (
             </li>
           ))}
         </ul>
-		  </section>
+      </section>
     </div>
   </Layout>
 )
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
             }
           }
           Title
-     	    Slug
+           Slug
         }
       }
     }

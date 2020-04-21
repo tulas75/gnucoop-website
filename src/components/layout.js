@@ -11,25 +11,23 @@ class Template extends React.Component {
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.timeoutId = setTimeout(() => {
-        this.setState({loading: ''});
+      this.setState({ loading: '' });
     }, 100);
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     if (this.timeoutId) {
-        clearTimeout(this.timeoutId);
+      clearTimeout(this.timeoutId);
     }
   }
 
   render() {
     const { children } = this.props
-
     return (
       <div className={`body ${this.state.loading}`}>
         <div id="wrapper">
-
           {children}
           <Footer />
         </div>

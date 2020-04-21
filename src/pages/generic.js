@@ -6,17 +6,15 @@ import HeaderGeneric from '../components/HeaderGeneric'
 import Nav from '../components/Nav'
 
 class Generic extends React.Component {
-  
   render() {
-
     return (
       <Layout>
         <Nav sticky={true} />
         <Helmet title="Generic Page Title" />
         <header id="header">
-        <h1>Page 2222Title</h1>
-        <p>Ipsum dolor sit amet nullam</p>
-    </header>
+          <h1>Page 2222Title</h1>
+          <p>Ipsum dolor sit amet nullam</p>
+        </header>
         <div id="main">
           <section id="content" className="main">
             <h2>Magna feugiat lorem</h2>

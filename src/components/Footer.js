@@ -6,24 +6,22 @@ const Footer = props => (
     <section>
       <h2>Get in touch!</h2>
       <p>
-	<form method="post" action="#">
-  <label>
-    Name
-    <input type="text" name="name" id="name" />
-  </label>
-  <label>
-    Email
-    <input type="email" name="email" id="email" />
-  </label>
-  <button type="submit">Send</button>
-</form>
+        <form method="post" action="#">
+          <label>
+            Name <input type="text" name="name" id="name" />
+          </label>
+          <label>
+            Email <input type="email" name="email" id="email" />
+          </label>
+          <button type="submit">Send</button>
+        </form>
       </p>
     </section>
     <section>
       <h2>Contacts</h2>
       <dl className="alt">
         <dt>Address</dt>
-        <dd>via Stefanardo da Vimercate 28 &bull; <br/>Milano, 20128 &bull; ITALY</dd>
+        <dd>via Stefanardo da Vimercate 28 &bull; <br />Milano, 20128 &bull; ITALY</dd>
         <dt>Phone</dt>
         <dd>(+39) 370-3309574</dd>
         <dt>Address</dt>
@@ -31,16 +29,11 @@ const Footer = props => (
         <dt>Phone</dt>
         <dd>(+39) 370-3173931</dd>
         <dt>Email</dt>
-        <dd>
-          <a href="mailto:info@gnucoop.com">info@gnucoop.com</a>
-        </dd>
+        <dd><a href="mailto:info@gnucoop.com">info@gnucoop.com</a></dd>
       </dl>
       <ul className="icons">
         <li>
-          <a
-            href="https://twitter.com/gnucoop"
-            className="icon fa-twitter alt"
-          >
+          <a href="https://twitter.com/gnucoop" className="icon fa-twitter alt">
             <span className="label">Twitter</span>
           </a>
         </li>
@@ -55,10 +48,7 @@ const Footer = props => (
           </a>
         </li>
         <li>
-          <a
-            href="https://github.com/gnucoop"
-            className="icon fa-github alt"
-          >
+          <a href="https://github.com/gnucoop" className="icon fa-github alt">
             <span className="label">GitHub</span>
           </a>
         </li>

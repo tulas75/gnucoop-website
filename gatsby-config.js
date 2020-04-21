@@ -17,7 +17,7 @@ module.exports = {
       resolve: 'gatsby-source-strapi',
       options: {
         apiURL: 'https://webdata.gnucoop.io',
-	      // apiURL: 'http://localhost:1337',
+        // apiURL: 'http://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'articles',
           'knowledges',
