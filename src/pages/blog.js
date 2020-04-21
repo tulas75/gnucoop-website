@@ -24,6 +24,7 @@ const BlogPage = ({ data }) => (
                 {/*<Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>*/}
                 [todo: feature image]
               </span>
+              {article.node.PublishDate}<br />
               <a href={`/${article.node.Slug}`}>{article.node.Title}</a>
             </li>
           ))}
@@ -37,10 +38,18 @@ export default BlogPage
 
 export const pageQuery = graphql`
   query BlogQuery {
-    allStrapiArticles {
+    allStrapiArticles(
+      sort: {
+        fields: [PublishDate]
+        order: DESC
+      }
+    ) {
       edges {
         node {
           id
+          Title
+          Slug
+          PublishDate
           FeatureImage {
             childImageSharp {
               fixed(width: 300, height: 200) {
@@ -48,8 +57,6 @@ export const pageQuery = graphql`
               }
             }
           }
-          Title
-           Slug
         }
       }
     }
