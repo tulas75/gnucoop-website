@@ -14,8 +14,7 @@ const ArticleTemplate = ({ data }) => (
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
-          {/*<Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>*/}
-          [todo: feature image]
+          <Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>
         </span>
         <h1>{data.strapiArticles.Title}</h1>
 	      <ReactMarkdown source={data.strapiArticles.Content} />
