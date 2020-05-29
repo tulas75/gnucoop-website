@@ -20,8 +20,7 @@ const ArticleTemplate = ({ data }) => (
 	      <ReactMarkdown source={data.strapiArticles.Content} />
 	      <br/>
 	      <br/>
-	      {/*data.strapiArticles.tags.tag*/}
-	      <a class="button special">TAGS:</a> [todo: lista dei tags]
+	      <a class="button special">TAGS:</a> { data.strapiArticles.tags.map(t => t.tag).join(', ') }
       </section>
     </div>
   </Layout>
