@@ -92,11 +92,11 @@
 			}
 		}
 
-		@include breakpoint(small) {
+		/*@include breakpoint(small) {
 			display: none;
 
 			& + #main {
 				padding-top: 0;
 			}
-		}
+		}*/
 	}
