@@ -1,6 +1,5 @@
 import React from 'react'
 import Scrollspy from 'react-scrollspy'
-import Scroll from './Scroll'
 import { Link } from 'gatsby'
 import pic01 from '../assets/images/logo.png'
 

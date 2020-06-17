@@ -1,8 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import HeaderGeneric from '../components/HeaderGeneric'
 import Nav from '../components/Nav'
 
 const ProductPage = ({ data }) => (

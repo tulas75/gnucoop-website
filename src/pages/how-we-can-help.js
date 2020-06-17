@@ -2,8 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/layout'
-import HeaderGeneric from '../components/HeaderGeneric'
-import pic04 from '../assets/images/pic04.jpg'
 import Nav from '../components/Nav'
 
 class Generic extends React.Component {

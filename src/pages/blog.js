@@ -1,11 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
-import HeaderGeneric from '../components/HeaderGeneric'
 import Nav from '../components/Nav'
+
+// '2020-12-31' -> '31/12/2020'
+function formatDateEu(d) {
+  return `${d.slice(8, 10)}/${d.slice(5, 7)}/${d.slice(0, 4)}`;
+}
 
 const BlogPage = ({ data }) => (
   <Layout>
@@ -24,7 +27,7 @@ const BlogPage = ({ data }) => (
                 <span className="main image">
                   <Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>
                 </span>
-                {article.node.PublishDate}<br />
+                {formatDateEu(article.node.PublishDate)}<br />
                 {article.node.Title}
               </a>
             </li>
