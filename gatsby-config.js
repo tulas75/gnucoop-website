@@ -25,6 +25,7 @@ module.exports = {
           'products',
           'projects',
           'solutions',
+          'tags',
           'team',
           'training',
         ],
