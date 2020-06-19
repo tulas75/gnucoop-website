@@ -13,7 +13,7 @@ class Generic extends React.Component {
           <h1>How we can help</h1>
           <p>Sectors of intervention</p>
         </header>
-        <Helmet title="Who we are" />
+        <Helmet title="Gnucoop - How we can help" />
         <div id="main">
           <section id="content" className="main">
             <h2>Introduction</h2>

@@ -9,7 +9,7 @@ import { formatDateEu } from '../utils/utils'
 const BlogPage = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title="Blog & Articles" />
+    <Helmet title="Gnucoop - Blog & Articles" />
     <header id="header">
       <h1>Blog & Articles</h1>
       <p>News from us</p>

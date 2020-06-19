@@ -11,7 +11,7 @@ const TrainingPage = ({ data }) => (
       <h1>Our training</h1>
       <p>Education is the most powerful weapon<br/> which you can use to change the world</p>
     </header>
-    <Helmet title="Our training" />
+    <Helmet title="Gnucoop - Training" />
     <div id="main">
       <section id="content" className="main">
         <p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>

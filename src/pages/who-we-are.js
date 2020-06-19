@@ -11,7 +11,7 @@ const TeamPage = ({ data }) => (
       <h1>Who we are</h1>
       <p>Discover Gnucoop Soc. Coop.</p>
     </header>
-    <Helmet title="Who we are" />
+    <Helmet title="Gnucoop - Who we are" />
     <div id="main">
       <section id="content" className="main">
         <h2>COMPANY STATEMENT</h2>

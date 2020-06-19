@@ -10,7 +10,7 @@ import { formatDateEu } from '../utils/utils'
 const ArticleTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title="Blog & Articles" />
+    <Helmet title={'Gnucoop - '+data.strapiArticles.Title} />
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">

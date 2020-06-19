@@ -20,7 +20,7 @@ function hasTag(tag) {
 const TagPage = ({ data, pageContext }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title="Blog & Articles" />
+    <Helmet title={'Gnucoop - Articles by tag: '+pageContext.tag} />
     <header id="header">
       <h1>Articles filtered by tag: {pageContext.tag}</h1>
       <p></p>

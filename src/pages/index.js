@@ -27,13 +27,8 @@ class Index extends React.Component {
     return (
       <Layout>
         <Helmet title="Gnucoop - Website" />
-
         <Header />
-
-        <Waypoint
-          onEnter={this._handleWaypointEnter}
-          onLeave={this._handleWaypointLeave}
-        ></Waypoint>
+        <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} />
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
