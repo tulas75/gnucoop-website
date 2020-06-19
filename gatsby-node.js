@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-    `).then(result => {
+  `).then(result => {
     // Create pages for each article.
     result.data.allStrapiArticles.edges.forEach(({ node }) => {
       actions.createPage({
@@ -47,6 +47,16 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/article.js'),
         context: {
           Slug: node.Slug,
+        },
+      })
+    })
+    // Create pages for each tag.
+    result.data.allStrapiTags.edges.forEach(({ node }) => {
+      actions.createPage({
+        path: '/tag/' + node.tag,
+        component: path.resolve('src/templates/tag.js'),
+        context: {
+          tag: node.tag,
         },
       })
     })
