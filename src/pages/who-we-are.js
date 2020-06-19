@@ -16,18 +16,18 @@ const TeamPage = ({ data }) => (
       <section id="content" className="main">
         <h2>COMPANY STATEMENT</h2>
         <h3>Vision</h3>
-          Our vision is to make development projects more effective through the 
-          use of free software and sustainable technological solutions
+          <p>Our vision is to make development projects more effective through the 
+          use of free software and sustainable technological solutions.</p>
         <h3>Mission</h3>
-          We offer a combination of technical competencies with development skills, in order 
+          <p>We offer a combination of technical competencies with development skills, in order 
           to give international cooperation projects a better chance to be successful.
           We promote long-term partnerships with other organizations, to strengthen skills 
           and provide technical services in the aid-for-development sector.
           We belong to the Digital humanitarian network and actively participate in the 
           international debate on the use of technology as aid supporting tool, linking up 
-          with the international network of aid worker and the international IT community.
+          with the international network of aid worker and the international IT community.</p>
         <h3>Guiding principles</h3>
-          Innovation, quality and efficiency are necessary elements for the development of 
+          <p>Innovation, quality and efficiency are necessary elements for the development of 
           technology and the services that we make available through our work.
           The constant support to our partners and clients from project planning to project 
           development contributes to the successful achievement of their objectives.
@@ -37,7 +37,7 @@ const TeamPage = ({ data }) => (
           our company.
           The young history, dynamism and flexibility of our organization make of its members 
           the key elements to succeed as a cooperative and to help achieving the important 
-          objectives of the international development community.
+          objectives of the international development community.</p>
         <h1>Team</h1>
         <ul class="features">
           {data.allStrapiTeam.edges.map(team => (
@@ -48,6 +48,25 @@ const TeamPage = ({ data }) => (
               <strong>{team.node.Name}</strong>
               <br/>
               {team.node.Description}
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="main">
+        <header className="major">
+          <h2>Our partners</h2>
+        </header>
+        <ul class="features">
+          {data.allStrapiPartners.edges.map(partner => (
+            <li key={partner.node.id}>
+              <a href={'/partner/'+partner.node.Partner}>
+                <h2>{partner.node.Partner}</h2>
+                <span className="main image">
+                  {/*<Img fixed={partner.node.FeatureImage.childImageSharp.fixed}/>*/}
+                  {partner.node.Excerpt}
+                </span>
+              </a>
             </li>
           ))}
         </ul>
@@ -73,6 +92,15 @@ export const pageQuery = graphql`
               }
             }
           }
+        }
+      }
+    }
+    allStrapiPartners {
+      edges {
+        node {
+          id
+          Partner
+          Excerpt
         }
       }
     }
