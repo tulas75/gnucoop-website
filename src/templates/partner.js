@@ -9,12 +9,15 @@ const PartnerTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
     <Helmet title={'Gnucoop - Partner: '+data.strapiPartners.Partner} />
+    <header id="header">
+      <h1>{data.strapiPartners.Partner}</h1>
+      <p></p>
+    </header>
     <div id="main">
       <section id="content" className="main">
         {/*<span className="main image ">
           <Img fluid={data.strapiPartners.FeatureImage.childImageSharp.fluid}/>
         </span>*/}
-        <h1>{data.strapiPartners.Partner}</h1>
 	      <ReactMarkdown source={data.strapiPartners.Content} />
       </section>
     </div>

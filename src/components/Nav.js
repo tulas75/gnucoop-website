@@ -16,10 +16,7 @@ const Nav = (props) => (
         <Link to="/who-we-are" type="id" element="intro">Who we are</Link>
       </li>
       <li>
-        <Link to="how-we-can-help" type="id" element="first">How we can help</Link>
-      </li>
-      <li>
-        <Link to="/products" type="id" element="cta">Solutions</Link>
+        <Link to="what-we-do" type="id" element="first">What we do</Link>
       </li>
       <li>
         <Link to="/blog" type="id" element="cta">Blog</Link>
