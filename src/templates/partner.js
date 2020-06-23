@@ -1,0 +1,33 @@
+import React from 'react'
+import Helmet from 'react-helmet'
+
+import Layout from '../components/layout'
+import Nav from '../components/Nav'
+import ReactMarkdown from 'react-markdown'
+
+const PartnerTemplate = ({ data }) => (
+  <Layout>
+    <Nav sticky={true} />
+    <Helmet title={'Gnucoop - Partner: '+data.strapiPartners.Partner} />
+    <div id="main">
+      <section id="content" className="main">
+        {/*<span className="main image ">
+          <Img fluid={data.strapiPartners.FeatureImage.childImageSharp.fluid}/>
+        </span>*/}
+        <h1>{data.strapiPartners.Partner}</h1>
+	      <ReactMarkdown source={data.strapiPartners.Content} />
+      </section>
+    </div>
+  </Layout>
+)
+
+export default PartnerTemplate
+
+export const query = graphql`
+  query PartnerTemplate($Partner: String) {
+    strapiPartners(Partner: {eq: $Partner}) {
+      Partner
+      Content
+    }
+  }
+`
