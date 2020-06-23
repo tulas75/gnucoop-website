@@ -45,6 +45,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStrapiProducts {
+        edges {
+          node {
+            Slug
+          }
+        }
+      }
     }
   `).then(result => {
     // Create pages for each article.
@@ -74,6 +81,16 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/partner.js'),
         context: {
           Partner: node.Partner,
+        },
+      })
+    })
+    // Create pages for each product.
+    result.data.allStrapiProducts.edges.forEach(({ node }) => {
+      actions.createPage({
+        path: '/product/' + node.Slug,
+        component: path.resolve('src/templates/product.js'),
+        context: {
+          Slug: node.Slug,
         },
       })
     })

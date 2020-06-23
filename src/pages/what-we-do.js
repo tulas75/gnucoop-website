@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
-const WatDoPage = () => (
+const WatDoPage = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
     <header id="header">
@@ -195,8 +195,42 @@ const WatDoPage = () => (
           If you have a good idea in mind, we know how to make it fun.
         </p>
       </section>
+
+      <section class="main">
+        <header className="major">
+          <h2>Our Products</h2>
+        </header>
+        <ul class="features">
+          {data.allStrapiProducts.edges.map(product => (
+            <li key={product.node.id}>
+              <a href={'/product/'+product.node.Slug}>
+                <h2>{product.node.Product}</h2>
+                <span className="main image">
+                  {/*<Img fixed={product.node.FeatureImage.childImageSharp.fixed}/>*/}
+                  {product.node.Excerpt}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
     </div>
   </Layout>
 )
 
 export default WatDoPage
+
+export const pageQuery = graphql`
+  query WatDoQuery {
+    allStrapiProducts {
+      edges {
+        node {
+          id
+          Product
+          Slug
+          Excerpt
+        }
+      }
+    }
+  }
+`
