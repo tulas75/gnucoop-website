@@ -32,7 +32,7 @@ class Index extends React.Component {
         <Nav sticky={this.state.stickyNav} />
 
         <div id="main">
-          <section id="intro" className="main">
+          <section id="who-we-are" className="main">
             <div className="spotlight">
               <div className="content">
                 <header className="major">
@@ -63,9 +63,9 @@ class Index extends React.Component {
             </div>
           </section>
 
-          <section id="first" className="main special">
+          <section id="what-we-do" className="main special">
             <header className="major">
-              <h2>How we can help</h2>
+              <h2>What we do</h2>
             </header>
             <ul className="features">
               <li>
@@ -108,7 +108,7 @@ class Index extends React.Component {
             </footer>
           </section>
 
-          <section id="second" className="main special">
+          <section id="projects-partners" className="main special">
             <header className="major">
               <h2>Our Projects with our Partners</h2>
               <p>
@@ -162,7 +162,7 @@ class Index extends React.Component {
             </footer>
           </section>
 
-          <section id="cta" className="main special">
+          <section id="academy" className="main special">
             <header className="major">
               <h2>Gnucoop Acadamy</h2>
               <p>
