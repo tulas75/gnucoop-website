@@ -1,18 +1,19 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 import { Waypoint } from 'react-waypoint'
 import gnu from '../assets/images/gnumeditate.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import { hasTag } from '../utils/utils'
 
 class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      stickyNav: false,
-    }
+    this.state = { stickyNav: false }
+    this.data = props.data
   }
 
   _handleWaypointEnter = () => {
@@ -100,7 +101,7 @@ class Index extends React.Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="/how-we-can-help" className="button">
+                  <Link to="/what-we-do" className="button">
                     Learn More
                   </Link>
                 </li>
@@ -154,13 +155,34 @@ class Index extends React.Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="/how-we-can-help" className="button">
+                  <Link to="/what-we-do" className="button">
                     Learn More
                   </Link>
                 </li>
               </ul>
             </footer>
           </section>
+
+          {this.data.allStrapiArticles.edges.filter(hasTag('homepage')).slice(0, 1).map(article => (
+          <section id="article" className="main special">
+            <header className="major">
+              <h2>Featured Article: <br />{article.node.Title}</h2>
+            </header>
+            <a href={'/blog/'+article.node.Slug}>
+              <span className="main image">
+                <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
+              </span>
+            </a>
+            <br /><p>{article.node.Excerpt}</p>
+            <ul className="actions">
+              <li>
+                <Link to={'/blog/'+article.node.Slug} className="button">
+                  Read More
+                </Link>
+              </li>
+            </ul>
+          </section>
+          ))}
 
           <section id="academy" className="main special">
             <header className="major">
@@ -172,9 +194,9 @@ class Index extends React.Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <Link to="https://academy.gnucoop.com" className="button special">
+                  <a href="https://academy.gnucoop.com" className="button special">
                     Get Started
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="/training" className="button">
@@ -191,3 +213,33 @@ class Index extends React.Component {
 }
 
 export default Index
+
+export const pageQuery = graphql`
+  query HomeQuery {
+    allStrapiArticles(
+      sort: {
+        fields: [PublishDate]
+        order: DESC
+      }
+    ) {
+      edges {
+        node {
+          id
+          Title
+          Slug
+          Excerpt
+          tags {
+            tag
+          }
+          FeatureImage {
+            childImageSharp {
+              fluid(maxHeight: 450) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`

@@ -4,18 +4,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
-import { formatDateEu } from '../utils/utils'
-
-function hasTag(tag) {
-  return article => {
-    for (const t of article.node.tags) {
-      if (t.tag === tag) {
-        return true;
-      }
-    }
-    return false;
-  }
-}
+import { formatDateEu, hasTag } from '../utils/utils'
 
 const TagPage = ({ data, pageContext }) => (
   <Layout>
