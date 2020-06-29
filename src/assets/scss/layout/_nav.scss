@@ -11,12 +11,20 @@
 			'background-color #{_duration(transition)} ease',
 			'border-top-left-radius #{_duration(transition)} ease',
 			'border-top-right-radius #{_duration(transition)} ease',
-			'padding #{_duration(transition)} ease',
 		));
 		@include color-typography(invert);
 		position: absolute;
+		// width matches wrapper's:
 		width: _size(inner);
-		max-width: calc(100% - #{_size(element-margin) * 2});
+		max-width: calc(100% - 4em);
+		margin: 0 auto;
+		@include breakpoint(xsmall) {
+			max-width: calc(100% - 2em);
+		}
+		@include breakpoint(xxsmall) {
+			max-width: 100%;
+		}
+
 		padding: 1em;
 		background-color: _palette(invert, bg-alt);
 		border-top-left-radius: _size(border-radius-main);
@@ -43,9 +51,6 @@
 				vertical-align: middle;
 
 				a {
-					@include vendor('transition', (
-						'font-size #{_duration(transition)} ease'
-					));
 					display: inline-block;
 					height: 2.25em;
 					line-height: 2.25em;
