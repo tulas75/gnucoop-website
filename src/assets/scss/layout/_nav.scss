@@ -18,6 +18,9 @@
 		width: _size(inner);
 		max-width: calc(100% - 4em);
 		margin: 0 auto;
+		@include breakpoint(small) {
+			padding: 0.7em 0;
+		}
 		@include breakpoint(xsmall) {
 			max-width: calc(100% - 2em);
 		}
