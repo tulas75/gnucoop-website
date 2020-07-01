@@ -105,3 +105,9 @@
 			}
 		}
 	}
+
+.gnu-image {
+	@include breakpoint(small) {
+		margin-top: 65px;
+	}
+}
