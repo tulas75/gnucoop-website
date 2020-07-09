@@ -156,7 +156,7 @@ class Index extends React.Component {
             <header className="major">
               <h2>Featured Article: <br />{article.node.Title}</h2>
             </header>
-            <a href={'/blog/'+article.node.Slug}>
+            <a href={'/article/'+article.node.Slug}>
               <span className="main image">
                 <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
               </span>
@@ -164,7 +164,7 @@ class Index extends React.Component {
             <br /><p>{article.node.Excerpt}</p>
             <ul className="actions">
               <li>
-                <Link to={'/blog/'+article.node.Slug} className="button">
+                <Link to={'/article/'+article.node.Slug} className="button">
                   Read More
                 </Link>
               </li>

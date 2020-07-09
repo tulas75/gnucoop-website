@@ -57,13 +57,29 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each article.
     result.data.allStrapiArticles.edges.forEach(({ node }) => {
       actions.createPage({
-        path: '/blog/' + node.Slug,
+        path: '/article/' + node.Slug,
         component: path.resolve('src/templates/article.js'),
         context: {
           Slug: node.Slug,
         },
       })
     })
+    // Create blog pages.
+    const articlesPerPage = 24;
+    const numPages = Math.max(1,
+      Math.ceil(result.data.allStrapiArticles.edges.length / articlesPerPage)
+    );
+    for (let p = 1; p <= numPages; p++) {
+      actions.createPage({
+        path: '/blog/' + p,
+        component: path.resolve('src/templates/blog.js'),
+        context: {
+          page: p,
+          numPages,
+          articlesPerPage,
+        },
+      })
+    }
     // Create pages for each tag.
     result.data.allStrapiTags.edges.forEach(({ node }) => {
       actions.createPage({

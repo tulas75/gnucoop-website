@@ -20,7 +20,7 @@ const Nav = (props) => (
         <Link to="/what-we-do">What we do</Link>
       </li>
       <li>
-        <Link to="/blog">Blog</Link>
+        <Link to="/blog/1">Blog</Link>
       </li>
       <li>
         <Link to="/training">Training</Link>
