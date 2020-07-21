@@ -63,6 +63,11 @@ const SolutionsPage = ({ data }) => (
           A multi-branched video story is created on the video sharing platform.
           The user is presented with options that define different narrative paths and participate to the creative process.
           It's a lot of fun, <a href="https://www.cinegame.eu/" target="blank">give it a try!</a>
+        </p><p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          <a href="/product/c2s">#c2s</a>&nbsp;&nbsp;
+          <a href="/partner/CIAI">#CIAI</a>&nbsp;&nbsp;
+          <a href="https://www.cinegame.eu/" target="blank">#Cinegame</a>&nbsp;&nbsp;
         </p>
         <h2>Health</h2>
         <p>
@@ -75,6 +80,10 @@ const SolutionsPage = ({ data }) => (
             <li>shortage of human resources for health, by empowering health promoters and spreading educational messages.</li>
           </ol>
           Our platform Dewco, a data collection tool, has been used, among others, for the development of the Integrated Refugees Health Information System (iRHIS) used by UNHCR to monitor health activities in refugee camps at worldwide level.
+        </p><p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          <a href="/partner/UNHCR">#iRHIS</a>&nbsp;&nbsp;
+          #Test &amp; Treat
         </p>
         <h2>Agriculture</h2>
         <p>
@@ -88,6 +97,10 @@ const SolutionsPage = ({ data }) => (
             <li>Data Collection and Monitoring Web and Mobile Platform</li>
             <li>GIS Platform</li>
           </ul>
+        </p><p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          <a href="/product/yago">#YAGO</a>&nbsp;&nbsp;
+          #Quelimane
         </p>
         <h2>MEAL: Impact Measurement</h2>
         <p>
@@ -99,6 +112,9 @@ const SolutionsPage = ({ data }) => (
           With DEWCO it is relatively easy to create baselines and targets and monitor how the project progresses.
           Custom reports can be created as well as a dynamic dashboard to measure indicators from the data collected.
           This allows to build actual knowledge on the measurement of outcomes and impacts, transforming a measurement exercise in a learning experience.
+        </p><p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          #Quelimane
         </p>
         <h2>Cash Distribution</h2>
         <p>
@@ -108,6 +124,9 @@ const SolutionsPage = ({ data }) => (
         </p><p>
           At the beginning of 2018, Gnucoop and <a href="http://merkur.io/" target="blank">Merkur.io</a> started a collaboration for providing a cash and voucher platform to NGOs and Humanitarian Agencies.
           Merkur.io is a secure digital payment platform capable of turning humanitarian voucher fairs into a fraud free, rapid and effective experience to NGOs, merchants and humanitarian assistance right holders (beneficiaries).
+        </p><p>
+          <a href="/product/merkur">#Merkur</a>&nbsp;&nbsp;
+          #Libya
         </p>
         <h2>Disaster Response</h2>
         <p>
@@ -119,6 +138,9 @@ const SolutionsPage = ({ data }) => (
         <p>
           Gnucoop developed a GIS platform, <b>YAGO (Yet Another GIS Online)</b> which enables visualizing the main threats and vulnerabilities, as well as resources available in the surrounding areas to foster crisis management by turning this information into actions. 
           This tool contributed to provide information and knowledge of the territory for decision making, strengthen participatory planning and minimizing disaster risks and vulnerabilities.
+        </p><p>
+          <a href="/product/yago">#YAGO</a>&nbsp;&nbsp;
+          #DRR
         </p>
         <h2>Training</h2>
         <p>
@@ -135,6 +157,8 @@ const SolutionsPage = ({ data }) => (
           We always try to adapt to our clients specific needs.
           Our approach is based on a rigorous background of theory, but we like to always refer to practice in order to show how different technologies can bring actual benefit to the work of development practitioners. 
           If you want to know more about upcoming courses, visit our <a href="/training">academy page</a>!
+        </p><p>
+          <a href="/tag/training">#Training</a>
         </p>
       </section>
     </div>
