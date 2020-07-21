@@ -32,6 +32,10 @@ const KnowledgePage = ({ data }) => (
           For example, through a face recognition algorithm we created a mobile app that can be used by teachers to register school attendance in Burkina Faso.
           Moreover, in our data collection system DEWCO, data validation is performed not only though standard logic but also by learning from the natural correlation within existing data.
         </p>
+        <p>
+          <a href="/product/c2s">#c2s</a>&nbsp;&nbsp;
+          #Picaps
+        </p>
         <h2>Data Management</h2>
         <p>
           If it is true that data is the new gold in the era of information, then the ability to manage data is a key factor for most profit and non-profit actors that operate in these times.
@@ -41,17 +45,43 @@ const KnowledgePage = ({ data }) => (
           These are the questions that most organisations are (or should be) asking themselves.
           We’ve got some ideas about it, and would be glad to share them.
         </p>
+        <p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          <a href="/partner/UNHCR">#iRHIS</a>&nbsp;&nbsp;
+          #Test &amp; Treat &nbsp;
+          #LIS &amp; EIS &nbsp;
+          #Change &nbsp;
+          #Quelimane &nbsp;
+          #Mah &nbsp;
+          #Para todas as criancas &nbsp;
+          #ForeSeeing Inclusion
+        </p>
         <h2>Blockchain</h2>
         <p>
           Blockchain is a technology introduced in 2008 to manage a database of transactions (or a ledger) across a distributed network, assuring a robust and secure synchronization mechanism across nodes that allows to make digital resources impossible to duplicate.
           There are several kinds of blockchains, also called DLT - Distributed Ledger Technologies, and their applications in development range from the certification of a supply chain, to the management of financial resource distribution (like cash or vouchers) in emergency and post-emergency contexts.
           We have used blockchain in Haiti and Libia for supporting the distribution of cash to the people affected by the disaster.
         </p>
+        <p>
+          <a href="/product/merkur">#Merkur</a>&nbsp;&nbsp;
+          #Libya
+        </p>
         <h2>Mobile Apps</h2>
         <p>
           Gnucoop usually provides a native mobile application for all the major mobile operating systems (iOS, Android, Windows Phone) assuring a fast performance and a high degree of reliability.
           Our mobile applications are realised using a cross-platform framework (i.e. Ionic), thus allowing the provision of the same features for every operating system and therefore reducing development and maintenance time and costs.
           The development is modular so that the system applications and modules can be extended through the use of plugins.
+        </p>
+        <p>
+          <a href="/product/dewco">#DEWCO</a>&nbsp;&nbsp;
+          <a href="/partner/UNHCR">#iRHIS</a>&nbsp;&nbsp;
+          <a href="/product/c2s">#c2s</a>&nbsp;&nbsp;
+          #Change &nbsp;
+          #Quelimane &nbsp;
+          #Mah &nbsp;
+          #Para todas as criancas &nbsp;
+          #ForeSeeing Inclusion &nbsp;
+          #Water trucking Software
         </p>
         <h2>Gamification</h2>
         <p>
@@ -62,6 +92,9 @@ const KnowledgePage = ({ data }) => (
           Transforming an online activity into a game is anything but simple, but if it is done well, the gamification can amplify the potential of any online experience.
           Some of us have more than twenty years experience in creating computer games.
           If you have a good idea in mind, we know how to make it fun.
+        </p>
+        <p>
+          <a href="https://www.cinegame.eu/" target="blank">#Cinegame</a>
         </p>
       </section>
     </div>
