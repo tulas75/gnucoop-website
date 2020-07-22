@@ -6,108 +6,93 @@
 
 /* Nav */
 
-	#nav {
-		@include vendor('transition', (
-			'background-color #{_duration(transition)} ease',
-			'border-top-left-radius #{_duration(transition)} ease',
-			'border-top-right-radius #{_duration(transition)} ease',
-		));
-		@include color-typography(invert);
-		position: absolute;
-		// width matches wrapper's:
-		width: _size(inner);
-		max-width: calc(100% - 4em);
-		margin: 0 auto;
-		@include breakpoint(small) {
-			padding: 0.7em 0;
-		}
-		@include breakpoint(xsmall) {
-			max-width: calc(100% - 2em);
-		}
-		@include breakpoint(xxsmall) {
-			max-width: 100%;
-		}
-		min-width: 300px;
+#nav {
+	@include vendor('transition', (
+		'background-color #{_duration(transition)} ease',
+		'border-top-left-radius #{_duration(transition)} ease',
+		'border-top-right-radius #{_duration(transition)} ease',
+		'padding #{_duration(transition)} ease',
+	));
+	@include color-typography(invert);
+	position: absolute;
+	width: _size(inner);
+	max-width: calc(100% - #{_size(element-margin) * 2});
+	padding: 1em;
+	background-color: _palette(invert, bg-alt);
+	border-top-left-radius: _size(border-radius-main);
+	border-top-right-radius: _size(border-radius-main);
+	cursor: default;
+	text-align: center;
 
-		padding: 1em 0;
-		background-color: _palette(invert, bg-alt);
-		border-top-left-radius: _size(border-radius-main);
-		border-top-right-radius: _size(border-radius-main);
-		cursor: default;
-		text-align: center;
+	& + #main {
+		padding-top: 3.5em;
+	}
 
-		ul {
-			margin: 0;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			@include vendor('transition', (
+				'margin #{_duration(transition)} ease'
+			));
+			display: inline-block;
+			margin: 0 0.35em;
 			padding: 0;
-			list-style: none;
+			vertical-align: middle;
 
-			li {
+			a {
 				@include vendor('transition', (
-					'margin #{_duration(transition)} ease'
-					'width #{_duration(transition)} ease'
+					'font-size #{_duration(transition)} ease'
 				));
 				display: inline-block;
-				margin: 0 0.35em;
-				padding: 0;
-				vertical-align: middle;
+				height: 2.25em;
+				line-height: 2.25em;
+				padding: 0 1.25em;
+				border: 0;
+				border-radius: _size(border-radius);
+				box-shadow: inset 0 0 0 1px transparent;
 
+				&:hover {
+					background-color: _palette(invert, border-bg);
+				}
+
+				// &.active {
+				// 	background-color: _palette(invert, bg);
+				// 	box-shadow: none;
+				// }
+			}
+			&.is-active {
 				a {
-					display: inline-block;
-					height: 2.25em;
-					line-height: 2.25em;
-					padding: 0 1em;
-					border: 0;
-					border-radius: _size(border-radius);
-					box-shadow: inset 0 0 0 1px transparent;
-
-					&:hover {
-						background-color: _palette(invert, border-bg);
-					}
-				}
-			}
-
-			hr {
-				margin: 8px 16px;
-				border-color: #ccc;
-			}
-			hr, br {
-				display: none;
-			}
-			@include breakpoint(small) {
-				hr, br {
-					display: block;
-				}
-				li {	
-					margin: 0 0.15em;
-					width: 95px;
-					a {
-						padding: 0 0.5em;
-						font-size: 0.9em;
-					}
-				}
-			}
-		}
-
-		&.alt {
-			position: fixed;
-			top: 0;
-			background-color: transparentize(_palette(invert, bg-alt), 0.05);
-			border-top-left-radius: 0;
-			border-top-right-radius: 0;
-			z-index: _misc(z-index-base);
-
-			ul {
-				li {
-					a {
-						font-size: 0.9em;
-					}
+					background-color: _palette(invert, bg);
+					box-shadow: none;
 				}
 			}
 		}
 	}
 
-.gnu-image {
+	&.alt {
+		position: fixed;
+		top: 0;
+		padding: 0.5em 1em;
+		background-color: transparentize(_palette(invert, bg-alt), 0.05);
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+		z-index: _misc(z-index-base);
+
+		ul {
+			li {
+				margin: 0 0.175em;
+
+				a {
+					font-size: 0.9em;
+				}
+			}
+		}
+	}
+
 	@include breakpoint(small) {
-		margin-top: 65px;
+		display: none;
 	}
 }

@@ -15,7 +15,6 @@ const Nav = (props) => (
       <li >
         <Link to="/who-we-are">Who we are</Link>
       </li>
-      <br /><hr />
       <li>
         <Link to="/what-we-do">What we do</Link>
       </li>
