@@ -14,8 +14,17 @@
 		'padding #{_duration(transition)} ease',
 	));
 	@include color-typography(invert);
-	position: absolute;
+	// wrapper's width:
 	width: _size(inner);
+	max-width: calc(100% - 4em);
+	@include breakpoint(xsmall) {
+		max-width: calc(100% - 2em);
+	}
+	@include breakpoint(xxsmall) {
+		max-width: 100%;
+	}
+
+	position: absolute;
 	max-width: calc(100% - #{_size(element-margin) * 2});
 	padding: 1em;
 	background-color: _palette(invert, bg-alt);
@@ -23,6 +32,9 @@
 	border-top-right-radius: _size(border-radius-main);
 	cursor: default;
 	text-align: center;
+	@include breakpoint(small) {
+		text-align: left;
+	}
 
 	& + #main {
 		padding-top: 3.5em;
@@ -70,6 +82,18 @@
 				}
 			}
 		}
+
+		.desktopNav {
+			@include breakpoint(small) {
+				display: none;
+			}
+		}
+		.mobileNav {
+			display: none;
+			@include breakpoint(small) {
+				display: inline-block;
+			}
+		}
 	}
 
 	&.alt {
@@ -90,9 +114,5 @@
 				}
 			}
 		}
-	}
-
-	@include breakpoint(small) {
-		display: none;
 	}
 }
