@@ -116,3 +116,54 @@
 		}
 	}
 }
+
+#mobileNavBg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 0.33s ease;
+
+	&.visible {
+		pointer-events: auto;
+		opacity: 0.5;
+	}
+}
+
+#mobileNav {
+	@include color-typography(invert);
+	position: fixed;
+	top: 0;
+	left: -270px;
+	z-index: 10001;
+	width: 250px;
+	height: 100vh;
+	background-color: white;
+	box-shadow: 0 0 15px #0008;
+	transition: left 0.36s ease;
+
+	&.visible {
+		left: 0;
+	}
+
+	ul {
+		list-style: none;
+		padding: 20px;
+
+		li {
+			padding: 0;
+
+			a {
+				display: block;
+				padding: 10px;
+				border-bottom: 1px solid #eee;
+				text-decoration: none;
+			}
+		}
+	}
+}
