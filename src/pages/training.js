@@ -44,7 +44,7 @@ export const pageQuery = graphql`
           Slug
           FeatureImage {
             childImageSharp {
-              fixed(width: 260, height: 260) {
+              fixed(width: 300, height: 200) {
                 ...GatsbyImageSharpFixed
               }
             }
