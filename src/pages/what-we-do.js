@@ -1,8 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import solutions from '../assets/images/solutions.png'
+import knowledge from '../assets/images/knowledge.png'
+import team from '../assets/images/team.png'
 
 const WatDoPage = ({ data }) => (
   <Layout>
@@ -16,7 +20,7 @@ const WatDoPage = ({ data }) => (
       <section class="main special">
         <ul class="features">
           <li>
-            <span className="icon major style1 fa-code"></span>
+            <img src={team} alt="" />
             <a href="/solutions" style={{'textDecoration': 'none'}}>
               <h3>Our Solutions</h3>
               <p>
@@ -28,7 +32,7 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-            <span className="icon major style3 fa-copy"></span>
+		<img src={solutions} alt="" />
             <a href="/products" style={{'textDecoration': 'none'}}>
               <h3>Our Products</h3>
               <p>
@@ -37,7 +41,8 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-            <span className="icon major style5 fa-diamond"></span>
+
+		<img src={knowledge} alt="" />
             <a href="/knowledge" style={{'textDecoration': 'none'}}>
               <h3>Our Knowledge</h3>
               <p>

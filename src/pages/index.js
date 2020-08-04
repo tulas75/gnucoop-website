@@ -3,7 +3,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import { Waypoint } from 'react-waypoint'
-import gnu from '../assets/images/gnumeditate.png'
+import gnu from '../assets/images/home.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -58,7 +58,7 @@ class Index extends React.Component {
                   </li>
                 </ul>
               </div>
-              <span className="image gnu-image">
+              <span >
                 <img src={gnu} alt="" />
               </span>
             </div>
@@ -154,7 +154,7 @@ class Index extends React.Component {
           {this.data.allStrapiArticles.edges.filter(hasTag('homepage')).slice(0, 1).map(article => (
           <section id="article" className="main special">
             <header className="major">
-              <h2>Featured Article: <br />{article.node.Title}</h2>
+              <h2>{article.node.Title}</h2>
             </header>
             <a href={'/article/'+article.node.Slug}>
               <span className="main image">
