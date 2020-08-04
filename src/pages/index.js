@@ -174,7 +174,7 @@ class Index extends React.Component {
 
           <section id="academy" className="main special">
             <header className="major">
-              <h2>Gnucoop Acadamy</h2>
+              <h2>Gnucoop Academy</h2>
               <p>
                 Education is the most powerful weapon which you can use to change the world...
               </p>
@@ -182,12 +182,7 @@ class Index extends React.Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <a href="https://academy.gnucoop.com" className="button special">
-                    Get Started
-                  </a>
-                </li>
-                <li>
-                  <Link to="/training" className="button">
+                  <Link to="/training" className="button special">
                     Learn More
                   </Link>
                 </li>
