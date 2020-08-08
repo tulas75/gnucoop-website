@@ -13,7 +13,7 @@ const WatDoPage = ({ data }) => (
     <Nav sticky={true} />
     <header id="header">
       <h1>What we do</h1>
-      <p>Sectors of intervention</p>
+      <p>How we can help you</p>
     </header>
     <Helmet title="Gnucoop - What we do" />
     <div id="main">

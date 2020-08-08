@@ -19,7 +19,7 @@
 			}
 
 			> .image.main:first-child {
-				margin: -5em 0 5em -5em;
+				margin: -2em 0 5em -5em;
 				width: calc(100% + 10em);
 				border-top-right-radius: _size(border-radius-main);
 				border-top-left-radius: _size(border-radius-main);
@@ -40,7 +40,7 @@
 				@include padding(4em, 4em);
 
 				> .image.main:first-child {
-					margin: -4em 0 4em -4em;
+					margin: 0.9em 0 4em -4em;
 					width: calc(100% + 8em);
 				}
 			}
@@ -51,7 +51,7 @@
 				@include padding(4em, 3em);
 
 				> .image.main:first-child {
-					margin: -4em 0 4em -3em;
+					margin: 0em 0 4em -3em;
 					width: calc(100% + 6em);
 				}
 			}
@@ -62,7 +62,7 @@
 				@include padding(3em, 2em);
 
 				> .image.main:first-child {
-					margin: -3em 0 2em -2em;
+					margin: -0.4em 0 2em -2em;
 					width: calc(100% + 4em);
 				}
 			}
@@ -73,7 +73,7 @@
 				@include padding(3em, 1.5em);
 
 				> .image.main:first-child {
-					margin: -3em 0 1.5em -1.5em;
+					margin: 0.2em 0 1.5em -1.5em;
 					width: calc(100% + 3em);
 				}
 			}

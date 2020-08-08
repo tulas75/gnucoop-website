@@ -4,6 +4,10 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import { Waypoint } from 'react-waypoint'
 import gnu from '../assets/images/home.png'
+import academy from '../assets/images/home-academy.png'
+import ai from '../assets/images/ai.png'
+import blockchain from '../assets/images/blockchain.png'
+import offline1 from '../assets/images/offline1.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -70,7 +74,10 @@ class Index extends React.Component {
             </header>
             <ul className="features">
               <li>
-                <span className="icon major style1 fa-code"></span>
+              <span className="image">
+                <img src={ai} alt="" />
+              </span>
+
                 <h3>Artificial Intelligence</h3>
                 <p>
                   With Artificial Intelligence and Machine Learning we refer to software systems
@@ -80,7 +87,10 @@ class Index extends React.Component {
                 </p>
               </li>
               <li>
-                <span className="icon major style3 fa-copy"></span>
+                  <span className="image">
+                <img src={blockchain} alt="" />
+              </span>
+
                 <h3>Blockchain</h3>
                 <p>
                   Blockchain is a technology introduced in 2008 to manage a database of transactions
@@ -89,7 +99,10 @@ class Index extends React.Component {
                 </p>
               </li>
               <li>
-                <span className="icon major style5 fa-diamond"></span>
+                 <span className="image">
+                <img src={offline1} alt="" />
+              </span>
+
                 <h3>Offline first APP</h3>
                 <p>
                   Gnucoop usually provides a native mobile application for all the major mobile
@@ -108,8 +121,8 @@ class Index extends React.Component {
               </ul>
             </footer>
           </section>
-
-          <section id="projects-partners" className="main special">
+	    {       /*
+	    <section id="projects-partners" className="main special">
             <header className="major">
               <h2>Our Projects with our Partners</h2>
             </header>
@@ -150,27 +163,36 @@ class Index extends React.Component {
               </ul>
             </footer>
           </section>
-
-          {this.data.allStrapiArticles.edges.filter(hasTag('homepage')).slice(0, 1).map(article => (
-          <section id="article" className="main special">
+*/}
+          <section id="what-we-do" className="main special">
             <header className="major">
-              <h2>{article.node.Title}</h2>
+              <h2>Latest news</h2>
             </header>
-            <a href={'/article/'+article.node.Slug}>
-              <span className="main image">
+            <ul className="features">
+          {this.data.allStrapiArticles.edges.map(article => (
+              <li key={article.node.id}>
+		  <Link to={'/article/'+article.node.Slug}>
+		  <span className="main image">
                 <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
               </span>
-            </a>
-            <br /><p>{article.node.Excerpt}</p>
-            <ul className="actions">
-              <li>
-                <Link to={'/article/'+article.node.Slug} className="button">
-                  Read More
+                <h3>{article.node.Title}</h3>
                 </Link>
+                <p>
+		  {article.node.Excerpt}
+                </p>
               </li>
-            </ul>
-          </section>
           ))}
+            </ul>
+            <footer className="major">
+              <ul className="actions">
+                <li>
+                  <Link to="/blog/1" className="button">
+                    All the news 
+                  </Link>
+                </li>
+              </ul>
+            </footer>
+          </section>
 
           <section id="academy" className="main special">
             <header className="major">
@@ -179,6 +201,9 @@ class Index extends React.Component {
                 Education is the most powerful weapon which you can use to change the world...
               </p>
             </header>
+              <span className="image">
+                <img src={academy} alt="" />
+              </span>
             <footer className="major">
               <ul className="actions">
                 <li>
@@ -204,6 +229,7 @@ export const pageQuery = graphql`
         fields: [PublishDate]
         order: DESC
       }
+      limit: 3 
     ) {
       edges {
         node {

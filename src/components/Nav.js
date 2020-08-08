@@ -59,6 +59,10 @@ class Nav extends React.Component {
             className={this.state.mobileNav ? 'visible' : ''}>
           <ul>
             <li>
+              <img src={logo} alt=""
+                style={{width: '33.6px', height: '30.2px', margin: '0 20px'}} />
+            </li>
+            <li>
               <Link to="/">Home</Link>
             </li>
             <li>

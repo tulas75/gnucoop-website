@@ -104,7 +104,7 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           page: p,
           numPages,
-          articlesPerPage,
+         articlesPerPage,
         },
       })
     }
