@@ -40,7 +40,7 @@ class Nav extends React.Component {
             <li className="desktopNav">
               <Link to="/what-we-do">What we do</Link>
             </li>
-            <li>
+            <li className="desktopNav">
               <Link to="/partners">Partners</Link>
             </li>
             <li className="desktopNav">

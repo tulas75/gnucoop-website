@@ -4,23 +4,23 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
-const SolutionPage = ({ data }) => (
+const KnowledgePage = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
     <header id="header">
-      <h1>Solutions</h1>
+      <h1>Knowledges</h1>
       <p>Help with mind</p>
     </header>
-    <Helmet title="Gnucoop - Solutions" />
+    <Helmet title="Gnucoop - Knowledges" />
     <div id="main">
       <section class="main">
         <ul class="features">
-          {data.allStrapiSolutions.edges.map(solution => (
-            <li key={solution.node.id}>
-              <a href={'/solution/'+solution.node.Slug}>
-                <h2>{solution.node.Solution}</h2>
+          {data.allStrapiKnowledges.edges.map(knowledge => (
+            <li key={knowledge.node.id}>
+              <a href={'/knowledge/'+knowledge.node.Slug}>
+                <h2>{knowledge.node.Knowledge}</h2>
                 <span className="main image">
-                  {solution.node.Excerpt}
+                  {knowledge.node.Excerpt}
                 </span>
               </a>
             </li>
@@ -31,15 +31,15 @@ const SolutionPage = ({ data }) => (
   </Layout>
 )
 
-export default SolutionPage 
+export default KnowledgePage 
 
 export const pageQuery = graphql`
-  query SolutionQuery {
-    allStrapiSolutions {
+  query KnowledgeQuery {
+    allStrapiKnowledges {
       edges {
         node {
           id
-          Solution 
+          Knowledge 
           Excerpt
 	  Slug
         }

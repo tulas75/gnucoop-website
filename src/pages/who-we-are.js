@@ -60,7 +60,12 @@ export default TeamPage
 
 export const pageQuery = graphql`
   query TeamQuery {
-    allStrapiTeam {
+    allStrapiTeam (
+        sort: {
+        fields: [id]
+        order: ASC 
+      }
+    ){
       edges {  
         node {
           id

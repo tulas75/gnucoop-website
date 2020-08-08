@@ -7,7 +7,7 @@
 /* Header */
 
 	#header {
-		padding: 85px 50px 0 50px;
+		padding: 60px 50px 0 50px;
 		text-align: center;
 
 		h1 {
@@ -49,7 +49,7 @@
 
 		@include breakpoint(small) {
 			// More padding-top for dual-row nav, less padding-left/right:
-			padding: 115px 20px 0 20px;
+			padding: 60px 10px 0px 10px;
 
 			p {
 				font-size: 1em;
@@ -61,6 +61,7 @@
 					font-size: 2.5em;
 				}
 			}
+
 		}
 
 		.body.is-loading & {

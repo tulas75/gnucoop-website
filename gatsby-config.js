@@ -47,11 +47,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',
-    {
-	resolve: 'gatsby-plugin-offline',
-        options: {
-        	precachePages: [`/article/*`]
-     	},
-    }
+    'gatsby-plugin-offline'
   ],
 }

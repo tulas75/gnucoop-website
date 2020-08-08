@@ -58,7 +58,7 @@ class Index extends React.Component {
                   </li>
                 </ul>
               </div>
-              <span >
+              <span className="image">
                 <img src={gnu} alt="" />
               </span>
             </div>

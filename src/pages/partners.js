@@ -9,13 +9,11 @@ const PartnerPage = ({ data }) => (
     <Nav sticky={true} />
     <header id="header">
       <h1>Partners</h1>
+      <p>Our contribution to reach SDG 17</p>
     </header>
     <Helmet title="Gnucoop - Partner" />
     <div id="main">
       <section class="main">
-        <header className="major">
-          <h2>Our partners</h2>
-        </header>
         <ul class="features">
           {data.allStrapiPartners.edges.map(partner => (
             <li key={partner.node.id}>

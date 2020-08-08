@@ -59,6 +59,20 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStrapiSolutions {
+        edges {
+          node {
+            Slug
+          }
+        }
+      }
+      allStrapiKnowledges {
+        edges {
+          node {
+            Slug
+          }
+        }
+      }
     }
   `).then(result => {
     // Create pages for each article.
@@ -127,5 +141,26 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+    result.data.allStrapiSolutions.edges.forEach(({ node }) => {
+      actions.createPage({
+        path: '/solution/' + node.Slug,
+        component: path.resolve('src/templates/solution.js'),
+        context: {
+          Slug: node.Slug,
+        },
+      })
+    })
+
+    result.data.allStrapiKnowledges.edges.forEach(({ node }) => {
+      actions.createPage({
+        path: '/knowledge/' + node.Slug,
+        component: path.resolve('src/templates/knowledge.js'),
+        context: {
+          Slug: node.Slug,
+        },
+      })
+    })
+
+
   });
 };
