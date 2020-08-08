@@ -17,12 +17,14 @@ const TrainingPage = ({ data }) => (
         <ul class="features">
           {data.allStrapiTraining.edges.map(training => (
             <li key={training.node.id}>
+	     <a href={'/training/'+training.node.Slug}>
               <span className="main image">
                 <Img fixed={training.node.FeatureImage.childImageSharp.fixed}/>
               </span>
               <strong>{training.node.Training}</strong>
               <br/>
               {training.node.Excerpt}
+		</a>
             </li>
           ))}
         </ul>

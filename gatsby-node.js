@@ -73,6 +73,13 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allStrapiTraining {
+        edges {
+          node {
+            Slug
+          }
+        }
+      }
     }
   `).then(result => {
     // Create pages for each article.
@@ -141,6 +148,7 @@ exports.createPages = ({ actions, graphql }) => {
         },
       })
     })
+    // Create pages for each solution.
     result.data.allStrapiSolutions.edges.forEach(({ node }) => {
       actions.createPage({
         path: '/solution/' + node.Slug,
@@ -151,6 +159,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
+    // Create pages for each knowledge.
     result.data.allStrapiKnowledges.edges.forEach(({ node }) => {
       actions.createPage({
         path: '/knowledge/' + node.Slug,
@@ -161,6 +170,16 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
+    // Create pages for each training.
+    result.data.allStrapiTraining.edges.forEach(({ node }) => {
+      actions.createPage({
+        path: '/training/' + node.Slug,
+        component: path.resolve('src/templates/training.js'),
+        context: {
+          Slug: node.Slug,
+        },
+      })
+    })
 
   });
 };
