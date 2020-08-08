@@ -52,25 +52,6 @@ const TeamPage = ({ data }) => (
           ))}
         </ul>
       </section>
-
-      <section class="main">
-        <header className="major">
-          <h2>Our partners</h2>
-        </header>
-        <ul class="features">
-          {data.allStrapiPartners.edges.map(partner => (
-            <li key={partner.node.id}>
-              <a href={'/partner/'+partner.node.Partner}>
-                <h2>{partner.node.Partner}</h2>
-                <span className="main image">
-                  {/*<Img fixed={partner.node.FeatureImage.childImageSharp.fixed}/>*/}
-                  {partner.node.Excerpt}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
     </div>
   </Layout>
 )
@@ -92,15 +73,6 @@ export const pageQuery = graphql`
               }
             }
           }
-        }
-      }
-    }
-    allStrapiPartners {
-      edges {
-        node {
-          id
-          Partner
-          Excerpt
         }
       }
     }
