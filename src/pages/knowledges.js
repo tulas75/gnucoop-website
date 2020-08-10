@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
@@ -12,6 +11,7 @@ const KnowledgePage = ({ data }) => (
       <p>Help with mind</p>
     </header>
     <Helmet title="Gnucoop - Knowledges" />
+       <meta name="description" content="testo di descrizione pagina" />
     <div id="main">
       <section className="main">
         <ul className="features">

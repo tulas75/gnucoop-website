@@ -1,13 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
-
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import solutions from '../assets/images/solutions.png'
 import products from '../assets/images/products.png'
 import knowledge from '../assets/images/knowledge.png'
-import team from '../assets/images/team.png'
 
 const WatDoPage = ({ data }) => (
   <Layout>
@@ -21,7 +18,7 @@ const WatDoPage = ({ data }) => (
       <section className="main special">
         <ul className="features">
           <li>
-            <img src={team} alt="" />
+            <img src={solutions} alt="" />
             <a href="/solutions" style={{'textDecoration': 'none'}}>
               <h3>Our Solutions</h3>
               <p>

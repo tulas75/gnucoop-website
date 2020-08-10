@@ -1,7 +1,6 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import whoweare from '../assets/images/who-we-are.png'

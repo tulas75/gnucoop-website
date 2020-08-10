@@ -4,7 +4,6 @@ const Footer = props => (
   <footer id="footer">
     <section>
       <h2>Get in touch!</h2>
-      <p>
         <form method="post" action="#">
           <label>
             Name <input type="text" name="name" id="name" />
@@ -14,7 +13,6 @@ const Footer = props => (
           </label>
           <button type="submit">Send</button>
         </form>
-      </p>
     </section>
     <section>
       <h2>Contacts</h2>

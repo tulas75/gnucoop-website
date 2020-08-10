@@ -11,7 +11,6 @@ import offline1 from '../assets/images/offline1.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
-import { hasTag } from '../utils/utils'
 
 class Index extends React.Component {
   constructor(props) {
@@ -44,7 +43,7 @@ class Index extends React.Component {
                   <h2>Who we are</h2>
                 </header>
                 <p>
-                  Gnucoop develops databases and web applications to help aid organisations
+                  Gnucoop develops mobile and web applications to help aid organisations
                   to easily manage their information and data.
                   Gnucoop  started in 2006 as a small group of free-lance IT professionals
                   with the idea that free software and technologies have great economical
@@ -121,49 +120,6 @@ class Index extends React.Component {
               </ul>
             </footer>
           </section>
-	    {       /*
-	    <section id="projects-partners" className="main special">
-            <header className="major">
-              <h2>Our Projects with our Partners</h2>
-            </header>
-            <p>
-              We support NGO and non-profit organisations in their work. We have experience in several fields of development, from education to agriculture.
-              We use effective and sustainable technological solutions that are already available or, when necessary, we develop our own.
-              If you have a problem, together we can think of a solution!
-            </p>
-            <ul className="statistics">
-              <li className="style1">
-                <span className="icon fa-code-fork"></span>
-                <strong> UNHCR</strong> Data collection in refugee Camps
-              </li>
-              <li className="style2">
-                <span className="icon fa-folder-open-o"></span>
-                <strong>CIAI</strong> Cheese2School for School Attendance
-              </li>
-              <li className="style3">
-                <span className="icon fa-signal"></span>
-                <strong>Save the Children</strong>Data collection for disability
-              </li>
-              <li className="style4">
-                <span className="icon fa-laptop"></span>
-                <strong>CBM</strong>Data collection for visual impaired
-              </li>
-              <li className="style5">
-                <span className="icon fa-diamond"></span>
-                <strong>CUAMM</strong> Data analytis to fight HIV
-              </li>
-            </ul>
-            <footer className="major">
-              <ul className="actions">
-                <li>
-                  <Link to="/what-we-do" className="button">
-                    Learn More
-                  </Link>
-                </li>
-              </ul>
-            </footer>
-          </section>
-*/}
           <section id="what-we-do" className="main special">
             <header className="major">
               <h2>Latest news</h2>
@@ -171,7 +127,7 @@ class Index extends React.Component {
             <ul className="features">
           {this.data.allStrapiArticles.edges.map(article => (
               <li key={article.node.id}>
-		  <Link to={'/article/'+article.node.Slug}>
+		  <Link to={'/'+article.node.Slug}>
 		  <span className="main image">
                 <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
               </span>

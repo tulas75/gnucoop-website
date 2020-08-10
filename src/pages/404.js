@@ -1,7 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Img from 'gatsby-image'
 import notfound from '../assets/images/404.png'
 import Nav from '../components/Nav'
 

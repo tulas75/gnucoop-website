@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
@@ -9,7 +8,7 @@ const SolutionPage = ({ data }) => (
     <Nav sticky={true} />
     <header id="header">
       <h1>Solutions</h1>
-      <p>Sustenible technlogical goals</p>
+      <p>Sustainable technological goal</p>
     </header>
     <Helmet title="Gnucoop - Solutions" />
     <div id="main">
