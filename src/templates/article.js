@@ -18,7 +18,7 @@ const ArticleTemplate = ({ data }) => (
         </span>
         <span className="article-date">{formatDateEu(data.strapiArticles.PublishDate)}</span>
         <h1>{data.strapiArticles.Title}</h1>
-	      <ReactMarkdown source={data.strapiArticles.Content} />
+	      <ReactMarkdown className="article-md" source={data.strapiArticles.Content} />
 	      <br/>
 	      <br/>
 	      <button className="button special" style={{cursor:'default'}}>TAGS:</button>
