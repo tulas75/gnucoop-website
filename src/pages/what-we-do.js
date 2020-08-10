@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import solutions from '../assets/images/solutions.png'
+import products from '../assets/images/products.png'
 import knowledge from '../assets/images/knowledge.png'
 import team from '../assets/images/team.png'
 
@@ -32,11 +33,11 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-		<img src={solutions} alt="" />
+		<img src={products} alt="" />
             <a href="/products" style={{'textDecoration': 'none'}}>
               <h3>Our Products</h3>
               <p>
-                Bla bla...
+	Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.
               </p>
             </a>
           </li>

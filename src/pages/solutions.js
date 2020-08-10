@@ -9,7 +9,7 @@ const SolutionPage = ({ data }) => (
     <Nav sticky={true} />
     <header id="header">
       <h1>Solutions</h1>
-      <p>Help with mind</p>
+      <p>Sustenible technlogical goals</p>
     </header>
     <Helmet title="Gnucoop - Solutions" />
     <div id="main">

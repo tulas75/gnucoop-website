@@ -1,8 +1,10 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import whoweare from '../assets/images/who-we-are.png'
 
 const TeamPage = ({ data }) => (
   <Layout>
@@ -14,18 +16,26 @@ const TeamPage = ({ data }) => (
     <Helmet title="Gnucoop - Who we are" />
     <div id="main">
       <section id="content" className="main">
-        <h2>COMPANY STATEMENT</h2>
+	    <div className="spotlight">
+              <div className="content">
         <h3>Vision</h3>
-          <p>Our vision is to make development projects more effective through the 
+          <p>Our vision is to make development projects more effective through the
           use of free software and sustainable technological solutions.</p>
         <h3>Mission</h3>
-          <p>We offer a combination of technical competencies with development skills, in order 
+          <p>We offer a combination of technical competencies with development skills, in order
           to give international cooperation projects a better chance to be successful.
-          We promote long-term partnerships with other organizations, to strengthen skills 
+          We promote long-term partnerships with other organizations, to strengthen skills
           and provide technical services in the aid-for-development sector.
-          We belong to the Digital humanitarian network and actively participate in the 
-          international debate on the use of technology as aid supporting tool, linking up 
+          We belong to the Digital humanitarian network and actively participate in the
+          international debate on the use of technology as aid supporting tool, linking up
           with the international network of aid worker and the international IT community.</p>
+
+              </div>
+              <span className="image">
+                <img src={whoweare} alt="" />
+              </span>
+            </div>
+
         <h3>Guiding principles</h3>
           <p>Innovation, quality and efficiency are necessary elements for the development of 
           technology and the services that we make available through our work.
@@ -38,6 +48,8 @@ const TeamPage = ({ data }) => (
           The young history, dynamism and flexibility of our organization make of its members 
           the key elements to succeed as a cooperative and to help achieving the important 
           objectives of the international development community.</p>
+	</section>
+	<section id="content" className="main">
         <h1>Team</h1>
         <ul class="features">
           {data.allStrapiTeam.edges.map(team => (
