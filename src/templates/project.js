@@ -5,7 +5,6 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
-import { formatDateEu } from '../utils/utils'
 
 const ProjectTemplate = ({ data }) => (
   <Layout>

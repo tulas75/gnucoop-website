@@ -30,8 +30,8 @@ const SolutionTemplate = ({ data }) => (
 export default SolutionTemplate
 
 export const query = graphql`
-  query SolutionTemplate($Solution: String) {
-    strapiSolutions(Solution: {eq: $Solution}) {
+  query SolutionTemplate($Slug: String) {
+    strapiSolutions(Slug: {eq: $Slug}) {
       Solution
       Content
     }

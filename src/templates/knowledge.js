@@ -31,8 +31,8 @@ const KnowledgeTemplate = ({ data }) => (
 export default KnowledgeTemplate
 
 export const query = graphql`
-  query KnowledgeTemplate($Knowledge: String) {
-    strapiKnowledges(Knowledge: {eq: $Knowledge}) {
+  query KnowledgeTemplate($Slug: String) {
+    strapiKnowledges(Slug: {eq: $Slug}) {
       Knowledge
       Content
     }
