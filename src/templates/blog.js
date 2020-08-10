@@ -37,7 +37,7 @@ const BlogTemplate = ({ data, pageContext }) => (
           ))}
         </ul>
         <br/>
-	      <button class="button special" style={{cursor:'default'}}>PAGES:</button>
+	      <button className="button special" style={{cursor:'default'}}>PAGES:</button>
         &nbsp;&nbsp;&nbsp;
         {pageNavigation(pageContext)}
       </section>

@@ -16,12 +16,12 @@ const ArticleTemplate = ({ data }) => (
         <span className="main image ">
           <Img fluid={data.strapiArticles.FeatureImage.childImageSharp.fluid}/>
         </span>
-        <span class="article-date">{formatDateEu(data.strapiArticles.PublishDate)}</span>
+        <span className="article-date">{formatDateEu(data.strapiArticles.PublishDate)}</span>
         <h1>{data.strapiArticles.Title}</h1>
-	      <ReactMarkdown source={data.strapiArticles.Content} />
+	      <ReactMarkdown className="article-md" source={data.strapiArticles.Content} />
 	      <br/>
 	      <br/>
-	      <button class="button special" style={{cursor:'default'}}>TAGS:</button>
+	      <button className="button special" style={{cursor:'default'}}>TAGS:</button>
         {data.strapiArticles.tags.map(t => (
           <span>&nbsp;&nbsp;&nbsp;<a href={'/tag/'+t.tag}>{t.tag}</a></span>
         ))}
