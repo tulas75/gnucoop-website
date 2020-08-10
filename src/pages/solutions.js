@@ -13,8 +13,8 @@ const SolutionPage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - Solutions" />
     <div id="main">
-      <section class="main">
-        <ul class="features">
+      <section className="main">
+        <ul className="features">
           {data.allStrapiSolutions.edges.map(solution => (
             <li key={solution.node.id}>
               <a href={'/solution/'+solution.node.Slug}>

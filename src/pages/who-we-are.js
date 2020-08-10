@@ -51,7 +51,7 @@ const TeamPage = ({ data }) => (
 	</section>
 	<section id="content" className="main">
         <h1>Team</h1>
-        <ul class="features">
+        <ul className="features">
           {data.allStrapiTeam.edges.map(team => (
             <li key={team.node.id}>
               <span className="main image">

@@ -13,8 +13,8 @@ const PartnerPage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - Partner" />
     <div id="main">
-      <section class="main">
-        <ul class="features">
+      <section className="main">
+        <ul className="features">
           {data.allStrapiPartners.edges.map(partner => (
             <li key={partner.node.id}>
               <a href={'/partner/'+partner.node.Partner}>

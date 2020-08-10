@@ -13,8 +13,8 @@ const KnowledgePage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - Knowledges" />
     <div id="main">
-      <section class="main">
-        <ul class="features">
+      <section className="main">
+        <ul className="features">
           {data.allStrapiKnowledges.edges.map(knowledge => (
             <li key={knowledge.node.id}>
               <a href={'/knowledge/'+knowledge.node.Slug}>

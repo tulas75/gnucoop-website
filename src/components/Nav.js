@@ -27,7 +27,7 @@ class Nav extends React.Component {
               <img src={menu} alt="" onClick={this.showMobileNav}
                 style={{width: '30px', height: '30px', margin: '0 20px'}} />
             </li>
-            <li class="desktopNav">
+            <li className="desktopNav">
               <img src={logo} alt=""
                 style={{width: '33.6px', height: '30.2px', margin: '0 20px'}} />
             </li>

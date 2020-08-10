@@ -18,8 +18,8 @@ const WatDoPage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - What we do" />
     <div id="main">
-      <section class="main special">
-        <ul class="features">
+      <section className="main special">
+        <ul className="features">
           <li>
             <img src={team} alt="" />
             <a href="/solutions" style={{'textDecoration': 'none'}}>

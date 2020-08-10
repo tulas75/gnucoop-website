@@ -13,7 +13,7 @@ const ProductPage = ({ data }) => (
     <Helmet title="Gnucoop - Our products" />
     <div id="main">
       <section id="content" className="main">
-        <ul class="features">
+        <ul className="features">
           {data.allStrapiProducts.edges.map(product => (
             <li key={product.node.id}>
               <a href={'/product/'+product.node.Slug}>
