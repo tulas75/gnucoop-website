@@ -13,14 +13,13 @@ const PartnerPage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - Partner" />
     <div id="main">
-      <section class="main">
-        <ul class="features">
+      <section className="main">
+        <ul className="features">
           {data.allStrapiPartners.edges.map(partner => (
             <li key={partner.node.id}>
+	     <Img fluid={partner.node.Logo.childImageSharp.fluid}/>
               <a href={'/partner/'+partner.node.Partner}>
-                <h2>{partner.node.Partner}</h2>
                 <span className="main image">
-                  {/*<Img fixed={partner.node.FeatureImage.childImageSharp.fixed}/>*/}
                   {partner.node.Excerpt}
                 </span>
               </a>
@@ -42,6 +41,14 @@ export const pageQuery = graphql`
           id
           Partner
           Excerpt
+	  Logo {
+            childImageSharp {
+              fluid(maxHeight: 120) {
+		aspectRatio
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

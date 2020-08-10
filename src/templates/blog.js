@@ -22,8 +22,8 @@ const BlogTemplate = ({ data, pageContext }) => (
       <p>News from us</p>
     </header>
     <div id="main">
-      <section class="main">
-        <ul class="features">
+      <section className="main">
+        <ul className="features">
           {sliceArticles(data.allStrapiArticles.edges, pageContext).map(article => (
             <li key={article.node.id}>
               <a href={'/'+article.node.Slug}>

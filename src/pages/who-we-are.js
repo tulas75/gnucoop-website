@@ -35,7 +35,6 @@ const TeamPage = ({ data }) => (
                 <img src={whoweare} alt="" />
               </span>
             </div>
-
         <h3>Guiding principles</h3>
           <p>Innovation, quality and efficiency are necessary elements for the development of 
           technology and the services that we make available through our work.
@@ -51,7 +50,7 @@ const TeamPage = ({ data }) => (
 	</section>
 	<section id="content" className="main">
         <h1>Team</h1>
-        <ul class="features">
+        <ul className="features">
           {data.allStrapiTeam.edges.map(team => (
             <li key={team.node.id}>
               <span className="main image">

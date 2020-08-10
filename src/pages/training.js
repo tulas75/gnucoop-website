@@ -14,7 +14,7 @@ const TrainingPage = ({ data }) => (
     <Helmet title="Gnucoop - Training" />
     <div id="main">
       <section id="content" className="main">
-        <ul class="features">
+        <ul className="features">
           {data.allStrapiTraining.edges.map(training => (
             <li key={training.node.id}>
 	     <a href={'/training/'+training.node.Slug}>
