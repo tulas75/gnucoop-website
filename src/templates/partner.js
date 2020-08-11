@@ -20,7 +20,7 @@ const PartnerTemplate = ({ data }) => (
 		  <ReactMarkdown source={data.strapiPartners.Content} />
               </div>
               <span >
-		<Img fixed={data.strapiPartners.Logo.childImageSharp.fixed}/>
+		<Img fluid={data.strapiPartners.Logo.childImageSharp.fluid}/>
               </span>
             </div>
           </section>
@@ -38,8 +38,8 @@ export const query = graphql`
       Content
       Logo {
             childImageSharp {
-              fixed(width: 500, height: 200) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 500, maxHeight: 200) {
+                ...GatsbyImageSharpFluid
               }
             }
           }

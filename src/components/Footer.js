@@ -17,7 +17,7 @@ class Footer extends React.Component {
     return (
       <footer id="footer">
         <section>
-          <h2>Subscribe to our newsletter!</h2>
+          <h2>Get in touch!</h2>
             <form>
               <label>
                 Name <input type="text" name="name" id="subName" />
@@ -30,7 +30,7 @@ class Footer extends React.Component {
             </form>
         </section>
         <section>
-          <h2>Contacts</h2>
+          <h2>Operational Headquarters</h2>
           <dl className="alt">
             <dt>Address</dt>
             <dd>via Stefanardo da Vimercate 28 &bull; <br />Milano, 20128 &bull; ITALY</dd>
@@ -72,7 +72,7 @@ class Footer extends React.Component {
           </ul>
         </section>
         <p className="copyright">
-          &copy; Gnucoop Soc. Coop. Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
+          <i class="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. - Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
         </p>
       </footer>
     )

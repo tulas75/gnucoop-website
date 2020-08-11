@@ -34,7 +34,7 @@ const WatDoPage = ({ data }) => (
             <a href="/products" style={{'textDecoration': 'none'}}>
               <h3>Our Products</h3>
               <p>
-	Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.
+	Working with our partners for many years had led us to identify some recurring problems. Even if we strongly believe that every project is a different experience, there are some questions that can be addressed with similar tools. Organisations that need to collect data they all experience similar problems, the same can be said for blockchain applications or in the domain of Geographical Information Systems. In these cases we have developed some products that we believe could be of great help to many organizations facing similar difficulties. If you want to know more about our products, have a look at this page!
               </p>
             </a>
           </li>
