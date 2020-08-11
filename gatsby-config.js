@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "gnucoop.com website",
     author: "Gnucoop Soc. Coop.",
-    siteUrl: "https://unruffled-dubinsky-a6c0b8.netlify.app/",
+    siteUrl: "https://www.gnucoop.com/",
     description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP"
   },
   plugins: [
@@ -54,8 +54,29 @@ module.exports = {
         icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
+     {
+      resolve: `gatsby-plugin-google-analytics-gdpr`,
+      options: {
+        // The property ID; the tracking code won't be generated without it.
+        trackingId: "UA-10623856-3", 
+        // Optional parameter (default false) - Enable analytics in development mode.
+        enableDevelopment: true, // default false
+        // Optional parameter (default true) - Some countries (such as Germany) require you to use the _anonymizeIP function for Google Analytics. Otherwise you are not allowed to use it.
+        anonymizeIP: true,
+        // Optional parameter (default false) - Starts google analytics with cookies enabled. In some countries (such as Germany) this is not allowed.
+        autoStartWithCookiesEnabled: true, 
+        // Optional parameter - Configuration for react-ga and google analytics 
+        reactGaOptions: {
+            debug: true,
+            gaOptions: {
+                sampleRate: 10
+            }
+        }
+      },
+    },
 
     'gatsby-plugin-sass',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-offline'
   ],
 }
