@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "gnucoop.com website",
     author: "Gnucoop Soc. Coop.",
-    siteUrl: `https://unruffled-dubinsky-a6c0b8.netlify.app/
+    siteUrl: "https://unruffled-dubinsky-a6c0b8.netlify.app/",
     description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP"
   },
   plugins: [
