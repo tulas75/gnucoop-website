@@ -53,6 +53,52 @@ module.exports = {
         icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
+
+    {
+        resolve: `gatsby-plugin-advanced-sitemap`,
+        options: {
+             // 1 query for each data type
+            query: `
+            {
+                allStrapiArticles {
+                    edges {
+                        node {
+                            id
+			    Title
+                            Slug
+                        }
+                    }
+                }
+            }`,
+            mapping: {
+                // Each data type can be mapped to a predefined sitemap
+                // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
+                // The default sitemap - if none is passed - will be pages
+                allStrapiArticles: {
+                    sitemap: `posts`,
+                },
+            },
+            exclude: [
+                `/dev-404-page`,
+                `/404`,
+                `/404.html`,
+                `/offline-plugin-app-shell-fallback`,
+                `/my-excluded-page`,
+                /(\/)?hash-\S*/, // you can also pass valid RegExp to exclude internal tags for example
+            ],
+            createLinkInHead: true, // optional: create a link in the `<head>` of your site
+            addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+            additionalSitemaps: [ // optional: add additional sitemaps, which are e. g. generated somewhere else, but need to be indexed for this domain
+                {
+                    url: `/sitemap-posts.xml`,
+                },
+                {
+			url: `https://unruffled-dubinsky-a6c0b8.netlify.app//sitemap.xml`,
+                },
+            ],
+        }
+    },
+
     'gatsby-plugin-sass',
     'gatsby-plugin-offline'
   ],

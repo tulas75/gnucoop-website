@@ -45,6 +45,11 @@ const Footer = props => (
           </a>
         </li>
         <li>
+          <a href="https://www.youtube.com/channel/UCtY0iTvoG10nDospIa34qzQ" className="icon fa-youtube alt">
+            <span className="label">YouTube</span>
+          </a>
+        </li>
+        <li>
           <a href="https://github.com/gnucoop" className="icon fa-github alt">
             <span className="label">GitHub</span>
           </a>
