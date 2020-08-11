@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "gnucoop.com website",
-    author: "Gnucoop",
+    author: "Gnucoop Soc. Coop.",
+    siteUrl: `https://unruffled-dubinsky-a6c0b8.netlify.app/
     description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP"
   },
   plugins: [
@@ -93,7 +94,7 @@ module.exports = {
                     url: `/sitemap-posts.xml`,
                 },
                 {
-			url: `https://unruffled-dubinsky-a6c0b8.netlify.app//sitemap.xml`,
+	            url: `https://unruffled-dubinsky-a6c0b8.netlify.app/sitemap.xml`,
                 },
             ],
         }
