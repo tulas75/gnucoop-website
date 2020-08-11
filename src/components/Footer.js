@@ -9,11 +9,7 @@ class Footer extends React.Component {
     const name = document.getElementById('subName').value;
     addToMailchimp(email, {MERGE1: name, MERGE4: 'English'})
     .then(data => {
-      if (data.result === 'success') {
-        window.alert('Thank you for subscribing :)');
-      } else {
-        console.log(data)
-      }
+      document.getElementById('subMessage').innerHTML = data.msg;
     });
   }
 
@@ -30,6 +26,7 @@ class Footer extends React.Component {
                 Email <input type="email" name="email" id="subEmail" />
               </label>
               <button onClick={this.submitMailchimp}>Send</button>
+              <p id="subMessage" style={{marginTop: '10px'}}></p>
             </form>
         </section>
         <section>
