@@ -22,8 +22,6 @@ const TrainingPage = ({ data }) => (
                 <Img fixed={training.node.FeatureImage.childImageSharp.fixed}/>
               </span>
               <strong>{training.node.Training}</strong>
-              <br/>
-              {training.node.Excerpt}
 		</a>
             </li>
           ))}
@@ -42,7 +40,6 @@ export const pageQuery = graphql`
         node {
           id
           Training
-          Excerpt
           Slug
           FeatureImage {
             childImageSharp {
