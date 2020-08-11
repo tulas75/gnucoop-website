@@ -54,6 +54,26 @@ module.exports = {
         icon: 'src/assets/images/logo.png', // This path is relative to the root of the site.
       },
     },
+     {
+      resolve: `gatsby-plugin-google-analytics-gdpr`,
+      options: {
+        // The property ID; the tracking code won't be generated without it.
+        trackingId: "UA-10623856-3", 
+        // Optional parameter (default false) - Enable analytics in development mode.
+        enableDevelopment: true, // default false
+        // Optional parameter (default true) - Some countries (such as Germany) require you to use the _anonymizeIP function for Google Analytics. Otherwise you are not allowed to use it.
+        anonymizeIP: true,
+        // Optional parameter (default false) - Starts google analytics with cookies enabled. In some countries (such as Germany) this is not allowed.
+        autoStartWithCookiesEnabled: true, 
+        // Optional parameter - Configuration for react-ga and google analytics 
+        reactGaOptions: {
+            debug: true,
+            gaOptions: {
+                sampleRate: 10
+            }
+        }
+      },
+    },
 
     'gatsby-plugin-sass',
     'gatsby-plugin-sitemap',
