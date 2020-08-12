@@ -58,3 +58,29 @@
 			@include padding(2.5em, 1em);
 		}
 	}
+
+#cookiesBar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include color-typography(invert);
+	margin: 0;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 9990;
+	width: 100vw;
+	height: 50px;
+	background-color: white;
+	box-shadow: 0 0 15px #0008;
+	transition: bottom 0.36s ease;
+
+	&.hidden {
+		bottom: -70px;
+	}
+
+	button {
+		padding: 0;
+		background-color: #444;
+	}
+}

@@ -1,7 +1,20 @@
 import React from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
+import { getCookie, setCookie } from '../utils/utils'
+
+const gdprCookie = 'gatsby-plugin-google-analytics-gdpr_cookies-enabled';
 
 class Footer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { cookiesAccepted: getCookie(gdprCookie) === 'true' }
+  }
+
+  acceptCookies = e => {
+    e.preventDefault();
+    setCookie(gdprCookie, 'true');
+    this.setState(() => ({ cookiesAccepted: true }))
+  }
 
   submitMailchimp = e => {
     e.preventDefault();
@@ -70,8 +83,15 @@ class Footer extends React.Component {
           </ul>
         </section>
         <p className="copyright">
-          <i class="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. <br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
+          <i className="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. <br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
         </p>
+
+        <div id="cookiesBar" className={this.state.cookiesAccepted ? 'hidden' : ''}
+        style={{backgroundColor: '#f7f7f7'}}>
+          This website uses cookies to improve your experience.
+          &nbsp;<a href="#" onClick={this.acceptCookies}><b>Accept</b></a>
+          &nbsp;&nbsp;-&nbsp;&nbsp;<a href="/privacy">Read More</a>
+        </div>
       </footer>
     )
   }
