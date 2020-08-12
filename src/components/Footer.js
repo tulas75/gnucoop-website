@@ -7,7 +7,7 @@ const gdprCookie = 'gatsby-plugin-google-analytics-gdpr_cookies-enabled';
 class Footer extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { cookiesAccepted: getCookie(gdprCookie) === 'true' }
+    this.state = { cookiesAccepted: false } // update when page is loaded
   }
 
   acceptCookies = e => {

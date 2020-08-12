@@ -125,19 +125,19 @@ class Index extends React.Component {
               <h2>Latest news</h2>
             </header>
             <ul className="features">
-          {this.data.allStrapiArticles.edges.map(article => (
+            {this.data.allStrapiArticles.edges.map(article => (
               <li key={article.node.id}>
-		  <Link to={'/'+article.node.Slug}>
-		  <span className="main image">
-                <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
-              </span>
-                <h3>{article.node.Title}</h3>
+		            <Link to={'/'+article.node.Slug}>
+                  <span className="main image">
+                    <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
+                  </span>
+                  <h3>{article.node.Title}</h3>
                 </Link>
                 <p>
-		  {article.node.Excerpt}
+		              {article.node.Excerpt}
                 </p>
               </li>
-          ))}
+            ))}
             </ul>
             <footer className="major">
               <ul className="actions">
