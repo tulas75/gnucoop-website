@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
@@ -11,7 +12,7 @@ const PartnerTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Partner: '+data.strapiPartners.Partner} />
     <header id="header">
       <h1>{data.strapiPartners.Partner}</h1>
-      <p></p>
+	<p> &lt; <Link to="/partners">Partners</Link> &gt; </p>
     </header>
     <div id="main">
               <section id="content" className="main">
@@ -20,7 +21,7 @@ const PartnerTemplate = ({ data }) => (
 		  <ReactMarkdown source={data.strapiPartners.Content} />
               </div>
               <span >
-		<Img fluid={data.strapiPartners.Logo.childImageSharp.fluid}/>
+		<Img fixed={data.strapiPartners.Logo.childImageSharp.fixed}/>
               </span>
             </div>
           </section>
@@ -32,14 +33,15 @@ const PartnerTemplate = ({ data }) => (
 export default PartnerTemplate
 
 export const query = graphql`
-  query PartnerTemplate($Partner: String) {
-    strapiPartners(Partner: {eq: $Partner}) {
+  query PartnerTemplate($Slug: String) {
+    strapiPartners(Slug: {eq: $Slug}) {
       Partner
+      Slug
       Content
       Logo {
             childImageSharp {
-              fluid(maxWidth: 500, maxHeight: 200) {
-                ...GatsbyImageSharpFluid
+              fixed(width: 400) {
+                ...GatsbyImageSharpFixed
               }
             }
           }

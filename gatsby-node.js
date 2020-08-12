@@ -41,7 +41,7 @@ exports.createPages = ({ actions, graphql }) => {
       allStrapiPartners {
         edges {
           node {
-            Partner
+            Slug
           }
         }
       }
@@ -121,10 +121,10 @@ exports.createPages = ({ actions, graphql }) => {
     // Create pages for each partner.
     result.data.allStrapiPartners.edges.forEach(({ node }) => {
       actions.createPage({
-        path: '/partner/' + node.Partner,
+        path: '/partner/' + node.Slug,
         component: path.resolve('src/templates/partner.js'),
         context: {
-          Partner: node.Partner,
+          Partner: node.Slug,
         },
       })
     })

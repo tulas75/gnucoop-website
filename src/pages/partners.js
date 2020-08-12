@@ -17,11 +17,11 @@ const PartnerPage = ({ data }) => (
         <ul className="features">
           {data.allStrapiPartners.edges.map(partner => (
             <li key={partner.node.id}>
-	     <Img fluid={partner.node.Logo.childImageSharp.fluid}/>
-              <a href={'/partner/'+partner.node.Partner}>
+              <a href={'/partner/'+partner.node.Slug}>
                 <span className="main image">
-                  {partner.node.Excerpt}
+	     <Img fixed={partner.node.Logo.childImageSharp.fixed}/>
                 </span>
+                  {partner.node.Excerpt}
               </a>
             </li>
           ))}
@@ -41,11 +41,11 @@ export const pageQuery = graphql`
           id
           Partner
           Excerpt
+	  Slug
 	  Logo {
             childImageSharp {
-              fluid(maxHeight: 120) {
-		aspectRatio
-                ...GatsbyImageSharpFluid
+              fixed(height:100, width:250) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
