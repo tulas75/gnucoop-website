@@ -14,3 +14,27 @@ export function hasTag(tag) {
     return false;
   }
 }
+
+export function setCookie(name, value, exdays) {
+  if (!exdays) {
+    exdays = 365;
+  }
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
+}
+
+export function getCookie(name) {
+  name = name + '=';
+  const ca = decodeURIComponent(document.cookie).split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return '';
+}
