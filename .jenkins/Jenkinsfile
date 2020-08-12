@@ -1,0 +1,22 @@
+#!groovy
+node {
+  env.NODEJS_HOME = "${tool 'node-12'}"
+	env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
+  
+  stage('Setup') {
+    echo 'Getting code...'
+    scmInfo = checkout scm
+    echo 'Installing Node packages...'
+    sh 'yarn install --frozen-lockfile --non-interactive'
+  }
+  
+  stage('Build') {
+    echo 'Building...'
+    sh 'yarn -s build'
+  }
+
+  stage('Deploy') {
+    echo 'Deploying...'
+    sh 'tar cfj - -C public . | ssh gnucoopgcjenkins@gnucoop.com "tar xfj - -C /web"'
+  }
+}
