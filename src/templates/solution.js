@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
@@ -10,7 +11,7 @@ const SolutionTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Solution: '+data.strapiSolutions.Solution} />
     <header id="header">
       <h1>{data.strapiSolutions.Solution}</h1>
-      <p></p>
+	<p> &lt; <Link to="/solutions">Solutions</Link> &gt; </p>
     </header>
     <div id="main">
               <section id="content" className="main">

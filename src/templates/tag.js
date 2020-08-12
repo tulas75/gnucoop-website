@@ -19,7 +19,7 @@ const TagPage = ({ data, pageContext }) => (
         <ul className="features">
           {data.allStrapiArticles.edges.filter(hasTag(pageContext.tag)).map(article => (
             <li key={article.node.id}>
-              <a href={'/article/'+article.node.Slug}>
+              <a href={'/'+article.node.Slug}>
                 <span className="main image">
                   <Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>
                 </span>

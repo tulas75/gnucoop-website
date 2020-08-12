@@ -41,7 +41,7 @@ const WatDoPage = ({ data }) => (
           <li>
 
 		<img src={knowledge} alt="" />
-            <a href="/knowledges" style={{'textDecoration': 'none'}}>
+            <a href="/knowledge" style={{'textDecoration': 'none'}}>
               <h3>Our Knowledge</h3>
               <p>
                 The world of technology evolves at an incredible pace.

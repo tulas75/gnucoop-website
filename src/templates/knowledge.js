@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
@@ -10,7 +11,7 @@ const KnowledgeTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Knowledge: '+data.strapiKnowledges.Knowledge} />
     <header id="header">
       <h1>{data.strapiKnowledges.Knowledge}</h1>
-      <p></p>
+	<p> &lt; <Link to="/knowledge">Knowlegde</Link> &gt; </p>
     </header>
     <div id="main">
               <section id="content" className="main">

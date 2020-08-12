@@ -32,14 +32,12 @@ class Footer extends React.Component {
         <section>
           <h2>Operational Headquarters</h2>
           <dl className="alt">
-            <dt>Address</dt>
-            <dd>via Stefanardo da Vimercate 28 &bull; <br />Milano, 20128 &bull; ITALY</dd>
-            <dt>Phone</dt>
-            <dd>(+39) 370-3309574</dd>
-            <dt>Address</dt>
-            <dd>Lungarno Mediceo 56 &bull; Pisa, 56127 &bull; ITALY</dd>
-            <dt>Phone</dt>
-            <dd>(+39) 370-3173931</dd>
+            <dt>Milano</dt>
+            <dd>via Stefanardo da Vimercate 28 <br />20128 ITALY</dd>
+            <dd>(+39) 3703309574</dd>
+            <dt>Pisa</dt>
+            <dd>Lungarno Mediceo 56 <br/>56127 ITALY</dd>
+            <dd>(+39) 3703173931</dd>
             <dt>Email</dt>
             <dd><a href="mailto:info@gnucoop.com">info@gnucoop.com</a></dd>
           </dl>
@@ -72,7 +70,7 @@ class Footer extends React.Component {
           </ul>
         </section>
         <p className="copyright">
-          <i class="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. - Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
+          <i class="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. <br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
         </p>
       </footer>
     )

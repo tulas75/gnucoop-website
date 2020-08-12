@@ -7,8 +7,8 @@ const KnowledgePage = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
     <header id="header">
-      <h1>Knowledges</h1>
-      <p>Help with mind</p>
+      <h1>Our Knowledge</h1>
+      <p>Following hackers' approach</p>
     </header>
     <Helmet title="Gnucoop - Knowledges" />
        <meta name="description" content="testo di descrizione pagina" />
