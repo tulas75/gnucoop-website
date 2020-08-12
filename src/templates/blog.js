@@ -28,7 +28,9 @@ const BlogTemplate = ({ data, pageContext }) => (
             <li key={article.node.id}>
               <a href={'/'+article.node.Slug}>
                 <span className="main image">
+                  {article.node.FeatureImage ?
                   <Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>
+                  : ''}
                 </span>
                 {formatDateEu(article.node.PublishDate)}<br />
                 {article.node.Title}
