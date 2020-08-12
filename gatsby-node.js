@@ -124,7 +124,7 @@ exports.createPages = ({ actions, graphql }) => {
         path: '/partner/' + node.Slug,
         component: path.resolve('src/templates/partner.js'),
         context: {
-          Partner: node.Slug,
+          Slug: node.Slug,
         },
       })
     })

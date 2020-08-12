@@ -19,7 +19,7 @@ const TrainingPage = ({ data }) => (
             <li key={training.node.id}>
 	     <a href={'/training/'+training.node.Slug}>
               <span className="main image">
-                <Img fixed={training.node.FeatureImage.childImageSharp.fixed}/>
+                <Img fluid={training.node.FeatureImage.childImageSharp.fluid}/>
               </span>
               <strong>{training.node.Training}</strong>
 		</a>
@@ -43,8 +43,8 @@ export const pageQuery = graphql`
           Slug
           FeatureImage {
             childImageSharp {
-              fixed(width: 300, height: 200) {
-                ...GatsbyImageSharpFixed
+              fluid(maxHeight: 400) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
