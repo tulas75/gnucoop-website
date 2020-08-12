@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-stellar",
-  "description": "Gatsby Starter - Stellar by HTML5 UP",
+  "name": "gnucoop-website",
+  "description": "Gnucoop Website",
   "version": "1.0.0",
-  "author": "Hunter Chang",
+  "author": "Gnucoop",
   "dependencies": {
     "gatsby": "^2.24.44",
     "gatsby-cli": "^2.12.84",
@@ -29,7 +29,8 @@
     "react-waypoint": "^9.0.3"
   },
   "keywords": [
-    "gatsby"
+    "gnucoop",
+    "website"
   ],
   "license": "MIT",
   "scripts": {
@@ -43,6 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/tulas75/gnucoop-website"
   }
 }
