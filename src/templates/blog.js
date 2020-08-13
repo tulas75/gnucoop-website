@@ -29,7 +29,7 @@ const BlogTemplate = ({ data, pageContext }) => (
               <a href={'/'+article.node.Slug}>
                 <span className="main image">
                   {article.node.FeatureImage ?
-                  <Img fixed={article.node.FeatureImage.childImageSharp.fixed}/>
+                  <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
                   : ''}
                 </span>
                 {formatDateEu(article.node.PublishDate)}<br />
@@ -81,8 +81,8 @@ export const query = graphql`
           PublishDate
           FeatureImage {
             childImageSharp {
-              fixed(width: 300, height: 200) {
-                ...GatsbyImageSharpFixed
+              fluid(maxHeight: 250) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
