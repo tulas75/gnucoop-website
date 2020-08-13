@@ -60,20 +60,18 @@
 	}
 
 #cookiesBar {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	text-align: center;
+	padding: 15px;
 	@include color-typography(invert);
 	margin: 0;
 	position: fixed;
 	left: 0;
-	bottom: -70px;
+	bottom: -100px;
 	z-index: 9990;
 	width: 100vw;
-	height: 50px;
 	background-color: white;
 	box-shadow: 0 0 15px #0008;
-	transition: bottom 0.36s ease;
+	transition: bottom 0.4s ease;
 
 	&.visible {
 		bottom: 0;

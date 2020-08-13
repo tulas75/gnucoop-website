@@ -26,8 +26,7 @@ class Footer extends React.Component {
     e.preventDefault();
     const email = document.getElementById('subEmail').value;
     const name = document.getElementById('subName').value;
-    addToMailchimp(email, {MERGE1: name, MERGE4: 'English'})
-    .then(data => {
+    addToMailchimp(email, {MERGE1: name, MERGE4: 'English'}).then(data => {
       document.getElementById('subMessage').innerHTML = data.msg;
     });
   }
@@ -95,8 +94,11 @@ class Footer extends React.Component {
         <div id="cookiesBar" className={this.state.cookiesBar ? 'visible' : ''}
         style={{backgroundColor: '#f7f7f7'}}>
           This website uses cookies to improve your experience.
-          &nbsp;<a href="#" onClick={this.acceptCookies}><b>Accept</b></a>
-          &nbsp;&nbsp;-&nbsp;&nbsp;<a href="/privacy">Read More</a>
+          &nbsp;&nbsp;
+          <span style={{whiteSpace: 'nowrap'}}>
+            <a href="#" onClick={this.acceptCookies}><b>Accept</b></a>
+            &nbsp;&nbsp;-&nbsp;&nbsp;<a href="/privacy">Read More</a>
+          </span>
         </div>
       </footer>
     )
