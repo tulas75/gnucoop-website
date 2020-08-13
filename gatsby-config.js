@@ -3,7 +3,8 @@ module.exports = {
     title: "gnucoop.com website",
     author: "Gnucoop Soc. Coop.",
     siteUrl: "https://www.gnucoop.com/",
-    description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP"
+    description: "Gnucoop Gatsby.js Site based on Stellar by HTML5 UP",
+    twitterUsername: "@gnucoop",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -65,7 +66,7 @@ module.exports = {
         anonymizeIP: true,
         // Optional parameter - Configuration for react-ga and google analytics 
         reactGaOptions: {
-            debug: true,
+            debug: false,
             gaOptions: {
                 sampleRate: 10
             }

@@ -104,9 +104,7 @@ class Index extends React.Component {
 
                 <h3>Offline first APP</h3>
                 <p>
-                  Gnucoop usually provides a native mobile application for all the major mobile
-                  operating systems (iOS, Android, Windows Phone) assuring a fast performance and
-                  a high degree of reliability.
+	    Mobile networks are frequently flaky. In addition people use mobile & web apps on the move. If your app did not have the ability to work well offline, every time your user took a subway or a plane or an Uber your app will potentially lose connectivity leading to a frustrating user experience.
                 </p>
               </li>
             </ul>
