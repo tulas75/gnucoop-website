@@ -63,7 +63,9 @@ module.exports = {
         enableDevelopment: true,
         // Optional parameter (default true) - Some countries (such as Germany) require IP anonymization.
         anonymizeIP: true,
-        // Optional parameter - Configuration for react-ga and google analytics 
+        // Optional parameter (default false) - Starts google analytics with cookies enabled. In some countries (such as Germany) this is not allowed.
+        autoStartWithCookiesEnabled: true,
+        // Optional parameter - Configuration for react-ga and google analytics
         reactGaOptions: {
             debug: true,
             gaOptions: {

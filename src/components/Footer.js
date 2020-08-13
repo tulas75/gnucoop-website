@@ -3,6 +3,7 @@ import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { getCookie, setCookie } from '../utils/utils'
 
 const gdprCookie = 'gatsby-plugin-google-analytics-gdpr_cookies-enabled';
+const acceptedCookie = 'cookies-accepted';
 
 class Footer extends React.Component {
   constructor(props) {
@@ -10,13 +11,14 @@ class Footer extends React.Component {
     this.state = { cookiesBar: false }
     // Don't try to read cookies on server side:
     setTimeout(() => {
-      this.setState(() => ({ cookiesBar: getCookie(gdprCookie) !== 'true' }))
+      this.setState(() => ({ cookiesBar: getCookie(acceptedCookie) !== 'true' }))
     }, 1)
   }
 
   acceptCookies = e => {
     e.preventDefault();
     setCookie(gdprCookie, 'true');
+    setCookie(acceptedCookie, 'true');
     this.setState(() => ({ cookiesBar: false }))
   }
 

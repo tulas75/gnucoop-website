@@ -36,7 +36,7 @@ Cookies on our website are used for the following purposes:
 	<tr><th>COOKIE</th><th>TYPE</th><th>DURATION</th><th>DESCRIPTION</th></tr>
 	<tr><td>__ga</td><td>Third part cookies</td><td>2 years</td><td>Used to distinguish users.</td></tr>
 	<tr><td>__gid</td><td>Third part cookies</td><td>24 hours</td><td>Used to distinguish users.</td></tr>
-	<tr><td>gatsby-plugin-google-analytics-gdpr_cookies-enabled</td><td>Essential</td><td>1 year</td><td>This cookie is to help us remember that you have seen the cookie message required by law.
+	<tr><td>gatsby-plugin-google-analytics-gdpr_cookies-enabled, cookies-accepted</td><td>Essential</td><td>1 year</td><td>This cookies help us remember that you have seen the cookie message required by law.
 </td></tr>
 	</table>
 	<h3>How do I Disable Cookies</h3>
