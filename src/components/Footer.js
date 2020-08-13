@@ -7,13 +7,17 @@ const gdprCookie = 'gatsby-plugin-google-analytics-gdpr_cookies-enabled';
 class Footer extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { cookiesAccepted: getCookie(gdprCookie) === 'true' }
+    this.state = { cookiesBar: false }
+    // Don't try to read cookies on server side:
+    setTimeout(() => {
+      this.setState(() => ({ cookiesBar: getCookie(gdprCookie) !== 'true' }))
+    }, 1)
   }
 
   acceptCookies = e => {
     e.preventDefault();
     setCookie(gdprCookie, 'true');
-    this.setState(() => ({ cookiesAccepted: true }))
+    this.setState(() => ({ cookiesBar: false }))
   }
 
   submitMailchimp = e => {
@@ -86,7 +90,7 @@ class Footer extends React.Component {
           <i className="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. <br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
         </p>
 
-        <div id="cookiesBar" className={this.state.cookiesAccepted ? 'hidden' : ''}
+        <div id="cookiesBar" className={this.state.cookiesBar ? 'visible' : ''}
         style={{backgroundColor: '#f7f7f7'}}>
           This website uses cookies to improve your experience.
           &nbsp;<a href="#" onClick={this.acceptCookies}><b>Accept</b></a>

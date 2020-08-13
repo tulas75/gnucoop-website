@@ -67,7 +67,7 @@
 	margin: 0;
 	position: fixed;
 	left: 0;
-	bottom: 0;
+	bottom: -70px;
 	z-index: 9990;
 	width: 100vw;
 	height: 50px;
@@ -75,8 +75,8 @@
 	box-shadow: 0 0 15px #0008;
 	transition: bottom 0.36s ease;
 
-	&.hidden {
-		bottom: -70px;
+	&.visible {
+		bottom: 0;
 	}
 
 	button {
