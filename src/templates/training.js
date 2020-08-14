@@ -12,7 +12,7 @@ const TrainingTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - '+data.strapiTraining.Training}
 meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiTraining.Training,
-      description: data.strapiTraining.Excerpt.substring(0, 160),
+      description: data.strapiTraining.Excerpt,
       fixedImage:  data.strapiTraining.FeatureImage.childImageSharp.fixed,
     })}/>
 

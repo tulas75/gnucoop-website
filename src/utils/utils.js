@@ -40,7 +40,7 @@ export function getCookie(name) {
 }
 
 // TODO: replace with https://www.gnucoop.com
-const baseUrl = 'https://unruffled-dubinsky-a6c0b8.netlify.app'
+const baseUrl = 'https://unruffled-dubinsky-a6c0b8.netlify.app';
 
 export function helmetMeta({title, description, fixedImage}) {
   const meta = [];
@@ -51,10 +51,11 @@ export function helmetMeta({title, description, fixedImage}) {
     );
   }
   if (description) {
+    const desc = description.substring(0, Math.min(160, description.length));
     meta.push(
-      { name:         'description', content: description },
-      { property:  'og:description', content: description },
-      { name: 'twitter:description', content: description },
+      { name:         'description', content: desc },
+      { property:  'og:description', content: desc },
+      { name: 'twitter:description', content: desc },
     );
   }
   if (fixedImage && fixedImage.src) {
@@ -68,9 +69,5 @@ export function helmetMeta({title, description, fixedImage}) {
       { property: 'og:image:height', content: fixedImage.height },
     );
   }
-  return meta
-}
-
-export function trunkDesc(d) {
-  return d.substring(0, Math.min(160, d.length))
+  return meta;
 }

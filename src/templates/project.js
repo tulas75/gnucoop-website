@@ -12,7 +12,7 @@ const ProjectTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - '+data.strapiProjects.Project} 
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiProjects.Title,
-      description: data.strapiProjects.Excerpt.substring(0, 160),
+      description: data.strapiProjects.Excerpt,
       fixedImage:  data.strapiProjects.FeatureImage.childImageSharp.fixed,
     })}	/>
     <div id="main">
