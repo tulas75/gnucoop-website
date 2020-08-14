@@ -70,3 +70,7 @@ export function helmetMeta({title, description, fixedImage}) {
   }
   return meta
 }
+
+export function trunkDesc(d) {
+  return d.substring(0, Math.min(160, d.length))
+}

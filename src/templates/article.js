@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
-import { formatDateEu, helmetMeta } from '../utils/utils'
+import { formatDateEu, helmetMeta, trunkDesc } from '../utils/utils'
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
@@ -13,7 +13,7 @@ const ArticleTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - '+data.strapiArticles.Title}
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiArticles.Title,
-      description: data.strapiArticles.Excerpt.substring(0, 160),
+      description: trunkDesc(data.strapiArticles.Excerpt),
       fixedImage:  data.strapiArticles.FeatureImage.childImageSharp.fixed,
     })}/>
     <div id="main">
