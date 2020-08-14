@@ -53,9 +53,11 @@ const TeamPage = ({ data }) => (
           {data.allStrapiTeam.edges.map(team => (
             <li key={team.node.id}>
               <span className="main image">
-                <Img fixed={team.node.ImageProfile.childImageSharp.fixed}/>
+                <Img fluid={team.node.ImageProfile.childImageSharp.fluid}/>
               </span>
               <strong>{team.node.Name}</strong>
+              <br/>
+		<i>{team.node.Role}</i>
               <br/>
               {team.node.Description}
             </li>
@@ -72,8 +74,8 @@ export const pageQuery = graphql`
   query TeamQuery {
     allStrapiTeam (
         sort: {
-        fields: [id]
-        order: ASC 
+        fields: [strapiId]
+        order: ASC
       }
     ){
       edges {  
@@ -81,10 +83,11 @@ export const pageQuery = graphql`
           id
           Name
           Description
+	  Role
           ImageProfile {
             childImageSharp {
-              fixed(width: 260, height: 260) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 260, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
