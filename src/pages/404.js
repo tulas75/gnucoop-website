@@ -11,11 +11,10 @@ const NotFoundPage = () => (
     <header id="header">
       <h1>404 Not found</h1>
       <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-              <span className="main image">
-                <img src={notfound} alt="" />
-              </span>
+      <span className="main image">
+        <img src={notfound} alt="" />
+      </span>
     </header>
-
   </Layout>
 )
 

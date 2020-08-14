@@ -27,7 +27,7 @@ const PartnerPage = ({ data }) => (
                 <span className="main image">
 	                <Img fixed={partner.node.Logo.childImageSharp.fixed}/>
                 </span>
-                  {partner.node.Excerpt}
+                {partner.node.Excerpt}
               </a>
             </li>
           ))}

@@ -28,9 +28,10 @@ const BlogTemplate = ({ data, pageContext }) => (
             <li key={article.node.id}>
               <a href={'/'+article.node.Slug}>
                 <span className="main image">
-                  {article.node.FeatureImage ?
-                  <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
-                  : ''}
+                  {
+                    article.node.FeatureImage ?
+                    <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/> : ''
+                  }
                 </span>
                 {formatDateEu(article.node.PublishDate)}<br />
                 {article.node.Title}

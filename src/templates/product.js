@@ -17,8 +17,8 @@ const ProductTemplate = ({ data }) => (
     })}	
     />
     <header id="header">
-	<h1>{data.strapiProducts.Product} </h1>
-	 <p> &lt; <Link to="/products">Products</Link> &gt; </p>
+	    <h1>{data.strapiProducts.Product} </h1>
+	    <p> &lt; <Link to="/products">Products</Link> &gt; </p>
     </header>
     <div id="main">
       <section id="content" className="main">

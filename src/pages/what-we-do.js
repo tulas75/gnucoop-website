@@ -36,17 +36,20 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-		<img src={products} alt="" />
+		        <img src={products} alt="" />
             <a href="/products" style={{'textDecoration': 'none'}}>
               <h3>Our Products</h3>
               <p>
-	Working with our partners for many years had led us to identify some recurring problems. Even if we strongly believe that every project is a different experience, there are some questions that can be addressed with similar tools. Organisations that need to collect data they all experience similar problems, the same can be said for blockchain applications or in the domain of Geographical Information Systems. In these cases we have developed some products that we believe could be of great help to many organizations facing similar difficulties. If you want to know more about our products, have a look at this page!
+	              Working with our partners for many years had led us to identify some recurring problems.
+                Even if we strongly believe that every project is a different experience, there are some questions that can be addressed with similar tools.
+                Organisations that need to collect data they all experience similar problems, the same can be said for blockchain applications or in the domain of Geographical Information Systems.
+                In these cases we have developed some products that we believe could be of great help to many organizations facing similar difficulties.
+                If you want to know more about our products, have a look at this page!
               </p>
             </a>
           </li>
           <li>
-
-		<img src={knowledge} alt="" />
+            <img src={knowledge} alt="" />
             <a href="/knowledge" style={{'textDecoration': 'none'}}>
               <h3>Our Knowledge</h3>
               <p>

@@ -12,20 +12,19 @@ const PartnerTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Partner: '+data.strapiPartners.Partner} />
     <header id="header">
       <h1>{data.strapiPartners.Partner}</h1>
-	<p> &lt; <Link to="/partners">Partners</Link> &gt; </p>
+	    <p> &lt; <Link to="/partners">Partners</Link> &gt; </p>
     </header>
     <div id="main">
-              <section id="content" className="main">
-            <div className="spotlight">
-              <div className="content">
-		  <ReactMarkdown source={data.strapiPartners.Content} />
-              </div>
-              <span >
-		<Img fixed={data.strapiPartners.Logo.childImageSharp.fixed}/>
-              </span>
-            </div>
-          </section>
-	
+      <section id="content" className="main">
+        <div className="spotlight">
+          <div className="content">
+		        <ReactMarkdown source={data.strapiPartners.Content} />
+          </div>
+          <span >
+		        <Img fixed={data.strapiPartners.Logo.childImageSharp.fixed}/>
+          </span>
+        </div>
+      </section>
     </div>
   </Layout>
 )
@@ -39,12 +38,12 @@ export const query = graphql`
       Slug
       Content
       Logo {
-            childImageSharp {
-              fixed(width: 400) {
-                ...GatsbyImageSharpFixed
-              }
-            }
+        childImageSharp {
+          fixed(width: 400) {
+            ...GatsbyImageSharpFixed
           }
+        }
+      }
     }
   }
 `
