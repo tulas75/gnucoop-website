@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
-
+import { helmetMeta } from '../utils/utils'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
@@ -9,7 +9,12 @@ import ReactMarkdown from 'react-markdown'
 const ProjectTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title={'Gnucoop - '+data.strapiProjects.Project} />
+    <Helmet title={'Gnucoop - '+data.strapiProjects.Project} 
+    meta={helmetMeta({
+      title:       'Gnucoop - '+data.strapiProjects.Title,
+      description: data.strapiProjects.Excerpt.substring(0, 160),
+      fixedImage:  data.strapiProjects.FeatureImage.childImageSharp.fixed,
+    })}	/>
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
@@ -34,6 +39,9 @@ export const query = graphql`
         childImageSharp {
           fluid(maxHeight: 450, maxWidth: 1160 ) {
             ...GatsbyImageSharpFluid
+          }
+          fixed(width:1080) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

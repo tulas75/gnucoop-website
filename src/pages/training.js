@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import { formatDateEu, helmetMeta } from '../utils/utils'
 
 const TrainingPage = ({ data }) => (
   <Layout>
@@ -11,7 +12,11 @@ const TrainingPage = ({ data }) => (
       <h1>Our training</h1>
       <p>Education is the most powerful weapon<br/> which you can use to change the world</p>
     </header>
-    <Helmet title="Gnucoop - Training" />
+    <Helmet title="Gnucoop - Training"
+      meta={helmetMeta({
+      title:       'Gnucoop - Training',
+      description: 'Education is the most powerful weapon which you can use to change the world',
+    })}/>
     <div id="main">
       <section id="content" className="main">
         <ul className="features">

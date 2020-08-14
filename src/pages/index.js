@@ -11,6 +11,7 @@ import offline1 from '../assets/images/offline1.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import { formatDateEu, helmetMeta } from '../utils/utils'
 
 class Index extends React.Component {
   constructor(props) {
@@ -30,7 +31,12 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Gnucoop - Website" />
+        <Helmet title="Gnucoop - Website" 
+    meta={helmetMeta({
+      title:       'Gnucoop Website',
+      description: 'Gnucoop develops mobile and web applications to help aid organisations to easily manage their information and data.',
+    })}
+	    />
         <Header />
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} />
         <Nav sticky={this.state.stickyNav} />

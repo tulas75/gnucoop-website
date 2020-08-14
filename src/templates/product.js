@@ -13,8 +13,7 @@ const ProductTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Product: '+data.strapiProducts.Product} 
     meta={helmetMeta({
       title:       'Gnucoop - Product: '+data.strapiProducts.Product,
-      description: data.strapiProducts.Excerpt,
-      imgSrc: '',
+      description: data.strapiProducts.Excerpt.substring(0, 160),
     })}	
     />
     <header id="header">

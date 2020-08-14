@@ -12,8 +12,7 @@ const SolutionTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Solution: '+data.strapiSolutions.Solution} 
     meta={helmetMeta({
       title:       'Gnucoop - Solution: '+data.strapiSolutions.Solution,
-      description: data.strapiSolutions.Excerpt,
-      imgSrc: 'logo2-21b925cd40c660cc779b268e99627684.png',
+      description: data.strapiSolutions.Excerpt.substring(0, 160),
     })}/>
     <header id="header">
       <h1>{data.strapiSolutions.Solution}</h1>

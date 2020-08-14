@@ -12,8 +12,7 @@ const KnowledgeTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Knowledge: '+data.strapiKnowledges.Knowledge}
     meta={helmetMeta({
       title:       'Gnucoop - Knowledge: '+data.strapiKnowledges.Knowledge,
-      description: data.strapiKnowledges.Excerpt,
-      imgSrc: '',
+      description: data.strapiKnowledges.Excerpt.substring(0, 160),
     })}/>
     <header id="header">
       <h1>{data.strapiKnowledges.Knowledge}</h1>

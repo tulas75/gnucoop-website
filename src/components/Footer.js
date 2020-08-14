@@ -43,7 +43,7 @@ class Footer extends React.Component {
               <label>
                 Email <input type="email" name="email" id="subEmail" />
               </label>
-              <button onClick={this.submitMailchimp}>Send</button>
+              <button onClick={this.submitMailchimp}>Subscribe to our Gnusletter</button>
               <p id="subMessage" style={{marginTop: '10px'}}></p>
             </form>
         </section>

@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import { helmetMeta } from '../utils/utils'
 
 const PartnerPage = ({ data }) => (
   <Layout>
@@ -11,7 +12,12 @@ const PartnerPage = ({ data }) => (
       <h1>Partners</h1>
       <p>Our contribution to reach SDG 17</p>
     </header>
-    <Helmet title="Gnucoop - Partner" />
+    <Helmet title="Gnucoop - Partner" 
+    meta={helmetMeta({
+      title:       'Gnucoop - Partner',
+      description: 'Our contribution to reach SDG 17',
+    })}	/>
+
     <div id="main">
       <section className="main">
         <ul className="features">

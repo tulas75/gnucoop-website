@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import solutions from '../assets/images/solutions.png'
 import products from '../assets/images/products.png'
 import knowledge from '../assets/images/knowledge.png'
+import { helmetMeta } from '../utils/utils'
 
 const WatDoPage = ({ data }) => (
   <Layout>
@@ -13,7 +14,12 @@ const WatDoPage = ({ data }) => (
       <h1>What we do</h1>
       <p>How we can help you</p>
     </header>
-    <Helmet title="Gnucoop - What we do" />
+    <Helmet title="Gnucoop - What we do" 
+    meta={helmetMeta({
+      title:       'Gnucoop - What we do',
+      description: 'Gnucoop develops mobile and web applications to help aid organisations to easily manage their information and data.',
+    })}
+            />
     <div id="main">
       <section className="main special">
         <ul className="features">

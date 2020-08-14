@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
-
+import { helmetMeta } from '../utils/utils'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
@@ -9,7 +9,13 @@ import ReactMarkdown from 'react-markdown'
 const TrainingTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title={'Gnucoop - '+data.strapiTraining.Training} />
+    <Helmet title={'Gnucoop - '+data.strapiTraining.Training}
+meta={helmetMeta({
+      title:       'Gnucoop - '+data.strapiTraining.Training,
+      description: data.strapiTraining.Excerpt.substring(0, 160),
+      fixedImage:  data.strapiTraining.FeatureImage.childImageSharp.fixed,
+    })}/>
+
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
@@ -35,6 +41,9 @@ export const query = graphql`
           fluid(maxWidth: 1160 ,maxHeight: 450) {
             aspectRatio
             ...GatsbyImageSharpFluid
+          }
+          fixed(width:1080) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

@@ -13,7 +13,7 @@ const ArticleTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - '+data.strapiArticles.Title}
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiArticles.Title,
-      description: data.strapiArticles.Excerpt,
+      description: data.strapiArticles.Excerpt.substring(0, 160),
       fixedImage:  data.strapiArticles.FeatureImage.childImageSharp.fixed,
     })}/>
     <div id="main">
