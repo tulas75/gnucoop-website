@@ -11,19 +11,16 @@ const KnowledgeTemplate = ({ data }) => (
     <Helmet title={'Gnucoop - Knowledge: '+data.strapiKnowledges.Knowledge} />
     <header id="header">
       <h1>{data.strapiKnowledges.Knowledge}</h1>
-	<p> &lt; <Link to="/knowledge">Knowlegde</Link> &gt; </p>
+	    <p> &lt; <Link to="/knowledge">Knowlegde</Link> &gt; </p>
     </header>
     <div id="main">
-              <section id="content" className="main">
-            <div className="spotlight">
-              <div className="content">
-		  <ReactMarkdown source={data.strapiKnowledges.Content} />
-              </div>
-              <span >
-              </span>
-            </div>
-          </section>
-	
+      <section id="content" className="main">
+        <div className="spotlight">
+          <div className="content">
+		        <ReactMarkdown source={data.strapiKnowledges.Content} />
+          </div>
+        </div>
+      </section>
     </div>
   </Layout>
 )

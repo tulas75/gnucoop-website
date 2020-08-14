@@ -73,10 +73,9 @@ class Index extends React.Component {
             </header>
             <ul className="features">
               <li>
-              <span className="image">
-                <img src={ai} alt="" />
-              </span>
-
+                <span className="image">
+                  <img src={ai} alt="" />
+                </span>
                 <h3>Artificial Intelligence</h3>
                 <p>
                   With Artificial Intelligence and Machine Learning we refer to software systems
@@ -86,10 +85,9 @@ class Index extends React.Component {
                 </p>
               </li>
               <li>
-                  <span className="image">
-                <img src={blockchain} alt="" />
-              </span>
-
+                <span className="image">
+                  <img src={blockchain} alt="" />
+                </span>
                 <h3>Blockchain</h3>
                 <p>
                   Blockchain is a technology introduced in 2008 to manage a database of transactions
@@ -98,13 +96,14 @@ class Index extends React.Component {
                 </p>
               </li>
               <li>
-                 <span className="image">
-                <img src={offline1} alt="" />
-              </span>
-
+                <span className="image">
+                  <img src={offline1} alt="" />
+                </span>
                 <h3>Offline first APP</h3>
                 <p>
-	    Mobile networks are frequently flaky. In addition people use mobile & web apps on the move. If your app did not have the ability to work well offline, every time your user took a subway or a plane or an Uber your app will potentially lose connectivity leading to a frustrating user experience.
+	                Mobile networks are frequently flaky. In addition people use mobile & web apps on the move.
+                  If your app did not have the ability to work well offline, every time your user took a subway
+                  or a plane or an Uber your app will potentially lose connectivity leading to a frustrating user experience.
                 </p>
               </li>
             </ul>

@@ -40,7 +40,7 @@ export const pageQuery = graphql`
           id
           Solution 
           Excerpt
-	  Slug
+	        Slug
         }
       }
     }
