@@ -17,19 +17,16 @@ const SolutionTemplate = ({ data }) => (
     })}/>
     <header id="header">
       <h1>{data.strapiSolutions.Solution}</h1>
-	<p> &lt; <Link to="/solutions">Solutions</Link> &gt; </p>
+	    <p> &lt; <Link to="/solutions">Solutions</Link> &gt; </p>
     </header>
     <div id="main">
-              <section id="content" className="main">
-            <div className="spotlight">
-              <div className="content">
-		  <ReactMarkdown source={data.strapiSolutions.Content} />
-              </div>
-              <span >
-              </span>
-            </div>
-          </section>
-	
+      <section id="content" className="main">
+        <div className="spotlight">
+          <div className="content">
+		        <ReactMarkdown source={data.strapiSolutions.Content} />
+          </div>
+        </div>
+      </section>
     </div>
   </Layout>
 )
