@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import whoweare from '../assets/images/who-we-are.png'
+import { helmetMeta } from '../utils/utils'
 
 const TeamPage = ({ data }) => (
   <Layout>
@@ -12,7 +13,11 @@ const TeamPage = ({ data }) => (
       <h1>Who we are</h1>
       <p>Discover Gnucoop Soc. Coop.</p>
     </header>
-    <Helmet title="Gnucoop - Who we are" />
+    <Helmet title="Gnucoop - Who we are" 
+    meta={helmetMeta({
+      title:       'Gnucoop - What we do',
+      description: 'We offer a combination of technical competencies with development skills, in order to give international cooperation projects a better chance to be successful',
+    })}/>
     <div id="main">
       <section id="content" className="main">
 	      <div className="spotlight">
