@@ -14,7 +14,7 @@ const ArticleTemplate = ({ data }) => (
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiArticles.Title,
       description: data.strapiArticles.Excerpt,
-      imageSrc:    data.strapiArticles.FeatureImage.childImageSharp.fluid.src,
+      fixedImage:  data.strapiArticles.FeatureImage.childImageSharp.fixed,
     })}/>
     <div id="main">
       <section id="content" className="main">
@@ -46,6 +46,9 @@ export const query = graphql`
         childImageSharp {
           fluid(maxHeight: 450, maxWidth: 1160) {
             ...GatsbyImageSharpFluid
+          }
+          fixed(width:1080) {
+            ...GatsbyImageSharpFixed
           }
         }
       }

@@ -19,7 +19,7 @@ const PartnerPage = ({ data }) => (
             <li key={partner.node.id}>
               <a href={'/partner/'+partner.node.Slug}>
                 <span className="main image">
-	     <Img fixed={partner.node.Logo.childImageSharp.fixed}/>
+	                <Img fixed={partner.node.Logo.childImageSharp.fixed}/>
                 </span>
                   {partner.node.Excerpt}
               </a>
@@ -41,8 +41,8 @@ export const pageQuery = graphql`
           id
           Partner
           Excerpt
-	  Slug
-	  Logo {
+	        Slug
+	        Logo {
             childImageSharp {
               fixed(height:100, width:250) {
                 ...GatsbyImageSharpFixed
