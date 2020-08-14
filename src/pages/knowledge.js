@@ -41,7 +41,7 @@ export const pageQuery = graphql`
           id
           Knowledge 
           Excerpt
-	  Slug
+	        Slug
         }
       }
     }

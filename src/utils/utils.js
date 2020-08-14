@@ -42,15 +42,31 @@ export function getCookie(name) {
 // TODO: replace with https://www.gnucoop.com
 const baseUrl = 'https://unruffled-dubinsky-a6c0b8.netlify.app'
 
-export function helmetMeta({title, description, imageSrc}) {
-  return [
-    { property:  'og:title', content: title },
-    { name: 'twitter:title', content: title },
-
-    { name:         'description', content: description },
-    { property:  'og:description', content: description },
-    { name: 'twitter:description', content: description },
-    
-    { property: 'og:image', content: baseUrl + imageSrc },
-  ]
+export function helmetMeta({title, description, fixedImage}) {
+  const meta = [];
+  if (title) {
+    meta.push(
+      { property:  'og:title', content: title },
+      { name: 'twitter:title', content: title },
+    );
+  }
+  if (description) {
+    meta.push(
+      { name:         'description', content: description },
+      { property:  'og:description', content: description },
+      { name: 'twitter:description', content: description },
+    );
+  }
+  if (fixedImage && fixedImage.src) {
+    meta.push(
+      { property: 'og:image', content: baseUrl + fixedImage.src },
+    );
+  }
+  if (fixedImage && fixedImage.width && fixedImage.height) {
+    meta.push(
+      { property: 'og:image:width',  content: fixedImage.width  },
+      { property: 'og:image:height', content: fixedImage.height },
+    );
+  }
+  return meta
 }
