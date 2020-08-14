@@ -34,7 +34,12 @@ export default SolutionPage
 
 export const pageQuery = graphql`
   query SolutionQuery {
-    allStrapiSolutions {
+    allStrapiSolutions (
+        sort: {
+        fields: [Solution]
+        order: ASC 
+      }
+    ){
       edges {
         node {
           id
