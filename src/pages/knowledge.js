@@ -35,7 +35,12 @@ export default KnowledgePage
 
 export const pageQuery = graphql`
   query KnowledgeQuery {
-    allStrapiKnowledges {
+    allStrapiKnowledges (
+        sort: {
+        fields: [Knowledge]
+        order: ASC
+      }
+    ){
       edges {
         node {
           id
