@@ -5,12 +5,17 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
-import { formatDateEu } from '../utils/utils'
+import { formatDateEu, helmetMeta } from '../utils/utils'
 
 const ArticleTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
-    <Helmet title={'Gnucoop - '+data.strapiArticles.Title} />
+    <Helmet title={'Gnucoop - '+data.strapiArticles.Title}
+    meta={helmetMeta({
+      title:       'Gnucoop - '+data.strapiArticles.Title,
+      description: data.strapiArticles.Excerpt,
+      imageSrc:    data.strapiArticles.FeatureImage.childImageSharp.fluid.src,
+    })}/>
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">
@@ -46,6 +51,7 @@ export const query = graphql`
       }
       Slug
       PublishDate
+      Excerpt
       tags {
 	      tag
 	    }

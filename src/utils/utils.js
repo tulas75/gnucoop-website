@@ -38,3 +38,19 @@ export function getCookie(name) {
   }
   return '';
 }
+
+// TODO: replace with https://www.gnucoop.com
+const baseUrl = 'https://unruffled-dubinsky-a6c0b8.netlify.app'
+
+export function helmetMeta({title, description, imageSrc}) {
+  return [
+    { property:  'og:title', content: title },
+    { name: 'twitter:title', content: title },
+
+    { name:         'description', content: description },
+    { property:  'og:description', content: description },
+    { name: 'twitter:description', content: description },
+    
+    { property: 'og:image', content: baseUrl + imageSrc },
+  ]
+}
