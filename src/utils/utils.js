@@ -39,7 +39,6 @@ export function getCookie(name) {
   return '';
 }
 
-// TODO: replace with https://www.gnucoop.com
 const baseUrl = 'https://www.gnucoop.com';
 
 export function helmetMeta({title, description, fixedImage}) {

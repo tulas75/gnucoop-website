@@ -11,7 +11,7 @@ import offline1 from '../assets/images/offline1.png'
 import Header from '../components/Header'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
-import { formatDateEu, helmetMeta } from '../utils/utils'
+import { helmetMeta } from '../utils/utils'
 
 class Index extends React.Component {
   constructor(props) {
@@ -135,10 +135,8 @@ class Index extends React.Component {
                     <Img fluid={article.node.FeatureImage.childImageSharp.fluid}/>
                   </span>
                   <h3>{article.node.Title}</h3>
+                  <p>{article.node.Excerpt}</p>
                 </Link>
-                <p>
-		              {article.node.Excerpt}
-                </p>
               </li>
             ))}
             </ul>

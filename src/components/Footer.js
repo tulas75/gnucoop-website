@@ -36,16 +36,16 @@ class Footer extends React.Component {
       <footer id="footer">
         <section>
           <h2>Get in touch!</h2>
-            <form>
-              <label>
-                Name <input type="text" name="name" id="subName" />
-              </label>
-              <label>
-                Email <input type="email" name="email" id="subEmail" />
-              </label>
-              <button onClick={this.submitMailchimp}>Subscribe to our Gnusletter</button>
-              <p id="subMessage" style={{marginTop: '10px'}}></p>
-            </form>
+          <form>
+            <label>
+              Name <input type="text" name="name" id="subName" />
+            </label>
+            <label>
+              Email <input type="email" name="email" id="subEmail" />
+            </label>
+            <button onClick={this.submitMailchimp}>Subscribe to our Gnusletter</button>
+            <p id="subMessage" style={{marginTop: '10px'}}></p>
+          </form>
         </section>
         <section>
           <h2>Operational Headquarters</h2>

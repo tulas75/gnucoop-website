@@ -18,14 +18,13 @@ const WatDoPage = ({ data }) => (
     meta={helmetMeta({
       title:       'Gnucoop - What we do',
       description: 'Gnucoop develops mobile and web applications to help aid organisations to easily manage their information and data.',
-    })}
-            />
+    })}/>
     <div id="main">
       <section className="main special">
         <ul className="features">
           <li>
-            <img src={solutions} alt="" />
             <a href="/solutions" style={{'textDecoration': 'none'}}>
+            <img src={solutions} alt="" />
               <h3>Our Solutions</h3>
               <p>
                 We support NGO and non-profit organisations in their work.
@@ -36,8 +35,8 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-		        <img src={products} alt="" />
             <a href="/products" style={{'textDecoration': 'none'}}>
+		        <img src={products} alt="" />
               <h3>Our Products</h3>
               <p>
 	              Working with our partners for many years had led us to identify some recurring problems.
@@ -49,8 +48,8 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-            <img src={knowledge} alt="" />
             <a href="/knowledge" style={{'textDecoration': 'none'}}>
+            <img src={knowledge} alt="" />
               <h3>Our Knowledge</h3>
               <p>
                 The world of technology evolves at an incredible pace.

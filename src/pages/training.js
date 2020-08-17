@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
-import { formatDateEu, helmetMeta } from '../utils/utils'
+import { helmetMeta } from '../utils/utils'
 
 const TrainingPage = ({ data }) => (
   <Layout>
