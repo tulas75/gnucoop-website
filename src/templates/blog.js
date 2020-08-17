@@ -26,7 +26,7 @@ const BlogTemplate = ({ data, pageContext }) => (
         <ul className="features">
           {sliceArticles(data.allStrapiArticles.edges, pageContext).map(article => (
             <li key={article.node.id}>
-              <a href={'/'+article.node.Slug}>
+              <a href={'/'+article.node.Slug} className="undecorated">
                 <span className="main image">
                   {
                     article.node.FeatureImage ?

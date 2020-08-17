@@ -14,7 +14,7 @@ const ProjectTemplate = ({ data }) => (
       title:       'Gnucoop - '+data.strapiProjects.Title,
       description: data.strapiProjects.Excerpt,
       fixedImage:  data.strapiProjects.FeatureImage.childImageSharp.fixed,
-    })}	/>
+    })}/>
     <div id="main">
       <section id="content" className="main">
         <span className="main image ">

@@ -44,6 +44,10 @@
 		}
 	}
 
+	.undecorated {
+		border-bottom: none;
+	}
+
 	strong, b {
 		font-weight: _font(weight-bold);
 	}

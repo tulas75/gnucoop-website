@@ -13,7 +13,7 @@ const TrainingPage = ({ data }) => (
       <p>Education is the most powerful weapon<br/>which you can use to change the world</p>
     </header>
     <Helmet title="Gnucoop - Training"
-      meta={helmetMeta({
+    meta={helmetMeta({
       title:       'Gnucoop - Training',
       description: 'Education is the most powerful weapon which you can use to change the world',
     })}/>
@@ -22,7 +22,7 @@ const TrainingPage = ({ data }) => (
         <ul className="features">
         {data.allStrapiTraining.edges.map(training => (
           <li key={training.node.id}>
-	          <a href={'/training/'+training.node.Slug}>
+	          <a href={'/training/'+training.node.Slug} className="undecorated">
               <span className="main image">
                 <Img fluid={training.node.FeatureImage.childImageSharp.fluid}/>
               </span>

@@ -23,7 +23,7 @@ const WatDoPage = ({ data }) => (
       <section className="main special">
         <ul className="features">
           <li>
-            <a href="/solutions" style={{'textDecoration': 'none'}}>
+            <a href="/solutions" className="undecorated">
             <img src={solutions} alt="" />
               <h3>Our Solutions</h3>
               <p>
@@ -35,7 +35,7 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-            <a href="/products" style={{'textDecoration': 'none'}}>
+            <a href="/products" className="undecorated">
 		        <img src={products} alt="" />
               <h3>Our Products</h3>
               <p>
@@ -48,7 +48,7 @@ const WatDoPage = ({ data }) => (
             </a>
           </li>
           <li>
-            <a href="/knowledge" style={{'textDecoration': 'none'}}>
+            <a href="/knowledge" className="undecorated">
             <img src={knowledge} alt="" />
               <h3>Our Knowledge</h3>
               <p>

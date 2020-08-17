@@ -23,7 +23,7 @@ const PartnerPage = ({ data }) => (
         <ul className="features">
           {data.allStrapiPartners.edges.map(partner => (
             <li key={partner.node.id}>
-              <a href={'/partner/'+partner.node.Slug} style={{textDecoration: 'none'}}>
+              <a href={'/partner/'+partner.node.Slug} className="undecorated">
                 <span className="main image">
 	                <Img fixed={partner.node.Logo.childImageSharp.fixed}/>
                 </span>

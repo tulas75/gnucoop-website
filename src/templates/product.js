@@ -14,8 +14,7 @@ const ProductTemplate = ({ data }) => (
     meta={helmetMeta({
       title:       'Gnucoop - Product: '+data.strapiProducts.Product,
       description: data.strapiProducts.Excerpt,
-    })}	
-    />
+    })}/>
     <header id="header">
 	    <h1>{data.strapiProducts.Product} </h1>
 	    <p> &lt; <Link to="/products">Products</Link> &gt; </p>

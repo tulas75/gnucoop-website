@@ -10,7 +10,7 @@ const TrainingTemplate = ({ data }) => (
   <Layout>
     <Nav sticky={true} />
     <Helmet title={'Gnucoop - '+data.strapiTraining.Training}
-meta={helmetMeta({
+    meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiTraining.Training,
       description: data.strapiTraining.Excerpt,
       fixedImage:  data.strapiTraining.FeatureImage.childImageSharp.fixed,
