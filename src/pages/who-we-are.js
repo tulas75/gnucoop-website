@@ -15,7 +15,7 @@ const TeamPage = ({ data }) => (
     </header>
     <Helmet title="Gnucoop - Who we are" 
     meta={helmetMeta({
-      title:       'Gnucoop - What we do',
+      title:       'Gnucoop - Who we are',
       description: 'We offer a combination of technical competencies with development skills, in order to give international cooperation projects a better chance to be successful',
     })}/>
     <div id="main">

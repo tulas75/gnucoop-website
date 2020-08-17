@@ -73,7 +73,7 @@ class Index extends React.Component {
             </div>
           </section>
 
-          <section id="what-we-do" className="main special">
+          <section id="what-we-do" className="main">
             <header className="major">
               <h2>What we do</h2>
             </header>
@@ -123,7 +123,7 @@ class Index extends React.Component {
               </ul>
             </footer>
           </section>
-          <section id="what-we-do" className="main special">
+          <section id="news" className="main">
             <header className="major">
               <h2>Latest news</h2>
             </header>
