@@ -70,7 +70,7 @@ module.exports = {
         reactGaOptions: {
             debug: false,
             gaOptions: {
-                sampleRate: 10
+                sampleRate: 100
             }
         }
       },
