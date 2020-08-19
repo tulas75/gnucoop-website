@@ -61,9 +61,9 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it.
         trackingId: "UA-10623856-3", 
         // Enable analytics in development mode.
-        enableDevelopment: true,
+        enableDevelopment: false,
         // Optional parameter (default true) - Some countries (such as Germany) require IP anonymization.
-        anonymizeIP: true,
+        anonymizeIP: false,
         // Optional parameter (default false) - Starts google analytics with cookies enabled. In some countries (such as Germany) this is not allowed.
         autoStartWithCookiesEnabled: true,
         // Optional parameter - Configuration for react-ga and google analytics
