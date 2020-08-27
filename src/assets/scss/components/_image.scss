@@ -59,8 +59,8 @@
 		}
 	}
 
-	// Images inside articles
-	.article-md img {
+	// Images and youtube iframes inside articles
+	.article-md img, .article-md iframe {
 		max-width: 100%;
 		// align at center:
 		display: block;

@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from 'react-markdown/with-html'
 import { formatDateEu, helmetMeta } from '../utils/utils'
 
 const ArticleTemplate = ({ data }) => (
@@ -23,7 +23,7 @@ const ArticleTemplate = ({ data }) => (
         </span>
         <span className="article-date">{formatDateEu(data.strapiArticles.PublishDate)}</span>
         <h1>{data.strapiArticles.Title}</h1>
-	      <ReactMarkdown className="article-md" source={data.strapiArticles.Content} />
+	      <ReactMarkdown className="article-md" source={data.strapiArticles.Content} escapeHtml={false} />
 	      <br/>
 	      <br/>
 	      <button className="button special" style={{cursor:'default'}}>TAGS:</button>
