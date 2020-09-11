@@ -88,7 +88,7 @@ class Footer extends React.Component {
           </ul>
         </section>
         <p className="copyright">
-          <i className="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. <br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
+          <i className="fa fa-copyright fa-flip-horizontal"></i> {new Date().getFullYear()} Gnucoop Soc. Coop. - VAT NUMBER: IT07931480961<br/> Built with Love - Definetely inspired by <a href="https://html5up.net">HTML5 UP</a>.
         </p>
 
         <div id="cookiesBar" className={this.state.cookiesBar ? 'visible' : ''}
