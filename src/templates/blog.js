@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
+import SearchBar from '../components/SearchBar'
 import { formatDateEu } from '../utils/utils'
 
 // Takes all articles, returns the slice of articles for this blog page.
@@ -22,6 +23,17 @@ const BlogTemplate = ({ data, pageContext }) => (
       <p>News from us</p>
     </header>
     <div id="main">
+      <section className="main" style={{paddingTop: '6px', paddingBottom: '6px'}}>
+        <SearchBar
+          width="100%"
+          id="blogSearch"
+          placeholder="Search Articles"
+          data={data.allStrapiArticles.edges.map(article => ({
+            key: article.node.Title,
+            url: '/'+article.node.Slug,
+          }))}
+        />
+      </section>
       <section className="main">
         <ul className="features">
           {sliceArticles(data.allStrapiArticles.edges, pageContext).map(article => (
