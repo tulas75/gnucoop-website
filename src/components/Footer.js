@@ -9,10 +9,10 @@ class Footer extends React.Component {
   constructor(props) {
     super(props)
     this.state = { cookiesBar: false }
-    // Don't try to read cookies on server side:
-    setTimeout(() => {
-      this.setState(() => ({ cookiesBar: getCookie(acceptedCookie) !== 'true' }))
-    }, 1)
+  }
+
+  componentDidMount() {
+    this.setState(() => ({ cookiesBar: getCookie(acceptedCookie) !== 'true' }))
   }
 
   acceptCookies = e => {
