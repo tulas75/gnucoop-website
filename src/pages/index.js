@@ -20,6 +20,20 @@ class Index extends React.Component {
     this.data = props.data
   }
 
+  componentDidMount() {
+    window.tiledeskSettings =
+    {
+   	projectid: "5feb303df5195b0019949897"
+    };
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://widget.tiledesk.com/v4/launch.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'tiledesk-jssdk'));
+  }
+
   _handleWaypointEnter = () => {
     this.setState(() => ({ stickyNav: false }))
   }
@@ -176,6 +190,7 @@ class Index extends React.Component {
     )
   }
 }
+
 
 export default Index
 
