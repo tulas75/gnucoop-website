@@ -23,7 +23,7 @@ const BlogTemplate = ({ data, pageContext }) => (
       <p>News from us</p>
     </header>
     <div id="main">
-      <section className="main" style={{paddingTop: '6px', paddingBottom: '6px'}}>
+      {/*<section className="main" style={{paddingTop: '6px', paddingBottom: '6px'}}>
         <SearchBar
           width="100%"
           id="blogSearch"
@@ -33,7 +33,7 @@ const BlogTemplate = ({ data, pageContext }) => (
             url: '/'+article.node.Slug,
           }))}
         />
-      </section>
+      </section>*/}
       <section className="main">
         <ul className="features">
           {sliceArticles(data.allStrapiArticles.edges, pageContext).map(article => (
