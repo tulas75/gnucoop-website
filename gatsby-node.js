@@ -82,6 +82,29 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(result => {
+    // Create static pages.
+    // Normally, these pages would go in the "pages" folder,
+    // but we need to pass them data for the search bar in nav.
+    const staticPages = {
+      '404':        'src/templates/404.js',
+      '/':          'src/templates/index.js',
+      knowledge:    'src/templates/knowledge-index.js',
+      partners:     'src/templates/partners.js',
+      privacy:      'src/templates/privacy.js',
+      products:     'src/templates/products.js',
+      solutions:    'src/templates/solutions.js',
+      training:     'src/templates/training-index.js',
+      'what-we-do': 'src/templates/what-we-do.js',
+      'who-we-are': 'src/templates/who-we-are.js',
+    }
+    for (let key in staticPages) {
+      actions.createPage({
+        path: key,
+        component: path.resolve(staticPages[key]),
+        context: {},
+      })
+    }
+
     // Create pages for each article.
     result.data.allStrapiArticles.edges.forEach(({ node }) => {
       actions.createPage({
