@@ -33,9 +33,9 @@ class Nav extends React.Component {
         <nav id="nav" className={this.props.sticky ? 'alt' : ''}>
           <ul>
             <li className="smallNavItem">
-              <Link className="imageLink" onClick={this.showSideNav}>
+              <a className="imageLink" onClick={this.showSideNav}>
                 <img src={menu} alt="show menu" style={{width: '28px', height: '28px'}} />
-              </Link>
+              </a>
             </li>
             <li className="largeNavItem">
               <Link to="/" className="imageLink">
@@ -69,9 +69,9 @@ class Nav extends React.Component {
               />
             </li>
             <li>
-              <Link className="imageLink" onClick={this.toggleSearchBar}>
+              <a className="imageLink" onClick={this.toggleSearchBar}>
                 <img src={search} alt="search" style={{width: '25px', height: '25px'}} />
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
