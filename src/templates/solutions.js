@@ -3,9 +3,9 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
-const SolutionPage = ({ data }) => (
+const SolutionPage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Solutions</h1>
       <p>Sustainable technological goal</p>

@@ -7,9 +7,9 @@ import products from '../assets/images/products.png'
 import knowledge from '../assets/images/knowledge.png'
 import { helmetMeta } from '../utils/utils'
 
-const WatDoPage = ({ data }) => (
+const WatDoPage = ({ pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>What we do</h1>
       <p>How we can help you</p>

@@ -66,10 +66,7 @@ class Nav extends React.Component {
                 width="100%"
                 id="searchInput"
                 placeholder="Search Site"
-                data={[{key: "foo", url: "bar"}]/*data.allStrapiArticles.edges.map(article => ({
-                  key: article.node.Title,
-                  url: '/'+article.node.Slug,
-                }))*/}
+                data={this.props.searchData || []}
               />
             </li>
             <li>

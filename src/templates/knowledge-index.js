@@ -3,9 +3,9 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
-const KnowledgePage = ({ data }) => (
+const KnowledgePage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Our Knowledge</h1>
       <p>Following hackers' approach</p>

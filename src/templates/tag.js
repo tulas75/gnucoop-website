@@ -8,7 +8,7 @@ import { formatDateEu, hasTag } from '../utils/utils'
 
 const TagPage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - Articles by tag: '+pageContext.tag} />
     <header id="header">
       <h1>Articles filtered by tag: {pageContext.tag}</h1>

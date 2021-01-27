@@ -4,9 +4,9 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import privacy from '../assets/images/privacy.png'
 
-const PrivacyPage = ({ data }) => (
+const PrivacyPage = ({ pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Privacy and cookie policy</h1>
       <p>Transparency for your privacy</p>

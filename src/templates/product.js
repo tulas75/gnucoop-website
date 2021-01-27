@@ -7,9 +7,9 @@ import ReactMarkdown from 'react-markdown'
 import { helmetMeta } from '../utils/utils'
 
 
-const ProductTemplate = ({ data }) => (
+const ProductTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - Product: '+data.strapiProducts.Product} 
     meta={helmetMeta({
       title:       'Gnucoop - Product: '+data.strapiProducts.Product,

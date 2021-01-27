@@ -16,7 +16,7 @@ function sliceArticles(a, pageContext) {
 
 const BlogTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title="Gnucoop - Blog & Articles" />
     <header id="header">
       <h1>Blog & Articles</h1>

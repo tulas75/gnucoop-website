@@ -28,6 +28,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             Slug
+            Title
           }
         }
       }
@@ -49,6 +50,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             Slug
+            Product
           }
         }
       }
@@ -63,6 +65,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             Slug
+            Solution
           }
         }
       }
@@ -70,6 +73,7 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             Slug
+            Knowledge
           }
         }
       }
@@ -82,6 +86,28 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(result => {
+    const searchData = (
+      result.data.allStrapiArticles.edges.map(article => ({
+        key: article.node.Title,
+        url: '/'+article.node.Slug,
+      }))
+    ).concat(
+      result.data.allStrapiProducts.edges.map(product => ({
+        key: product.node.Product,
+        url: '/product/' + product.node.Slug,
+      }))
+    ).concat(
+      result.data.allStrapiSolutions.edges.map(solution => ({
+        key: solution.node.Solution,
+        url: '/solution/' + solution.node.Slug,
+      }))
+    ).concat(
+      result.data.allStrapiKnowledges.edges.map(knowledge => ({
+        key: knowledge.node.Knowledge,
+        url: '/knowledge/' + knowledge.node.Slug,
+      }))
+    )
+
     // Create static pages.
     // Normally, these pages would go in the "pages" folder,
     // but we need to pass them data for the search bar in nav.
@@ -101,7 +127,7 @@ exports.createPages = ({ actions, graphql }) => {
       actions.createPage({
         path: key,
         component: path.resolve(staticPages[key]),
-        context: {},
+        context: { searchData },
       })
     }
 

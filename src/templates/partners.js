@@ -5,9 +5,9 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import { helmetMeta } from '../utils/utils'
 
-const PartnerPage = ({ data }) => (
+const PartnerPage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Partners</h1>
       <p>Our contribution to reach SDG 17</p>

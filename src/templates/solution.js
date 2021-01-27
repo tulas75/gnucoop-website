@@ -6,9 +6,9 @@ import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
 import { helmetMeta } from '../utils/utils'
 
-const SolutionTemplate = ({ data }) => (
+const SolutionTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - Solution: '+data.strapiSolutions.Solution} 
     meta={helmetMeta({
       title:       'Gnucoop - Solution: '+data.strapiSolutions.Solution,

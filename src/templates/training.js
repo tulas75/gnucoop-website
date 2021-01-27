@@ -6,9 +6,9 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
 
-const TrainingTemplate = ({ data }) => (
+const TrainingTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - '+data.strapiTraining.Training}
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiTraining.Training,

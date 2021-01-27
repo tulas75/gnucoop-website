@@ -4,9 +4,9 @@ import Layout from '../components/layout'
 import notfound from '../assets/images/404.png'
 import Nav from '../components/Nav'
 
-const NotFoundPage = () => (
+const NotFoundPage = ({ pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title="Gnucoop - 404" />
     <header id="header">
       <h1>404 Not found</h1>

@@ -6,9 +6,9 @@ import Layout from '../components/layout'
 import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown'
 
-const PartnerTemplate = ({ data }) => (
+const PartnerTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - Partner: '+data.strapiPartners.Partner} />
     <header id="header">
       <h1>{data.strapiPartners.Partner}</h1>

@@ -3,9 +3,9 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Nav from '../components/Nav'
 
-const ProductPage = ({ data }) => (
+const ProductPage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Our products</h1>
       <p>Gnucoop's tools</p>

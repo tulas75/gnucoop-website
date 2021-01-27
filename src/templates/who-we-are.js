@@ -6,9 +6,9 @@ import Nav from '../components/Nav'
 import whoweare from '../assets/images/who-we-are.png'
 import { helmetMeta } from '../utils/utils'
 
-const TeamPage = ({ data }) => (
+const TeamPage = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <header id="header">
       <h1>Who we are</h1>
       <p>Discover Gnucoop Soc. Coop.</p>

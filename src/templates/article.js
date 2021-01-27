@@ -7,9 +7,9 @@ import Nav from '../components/Nav'
 import ReactMarkdown from 'react-markdown/with-html'
 import { formatDateEu, helmetMeta } from '../utils/utils'
 
-const ArticleTemplate = ({ data }) => (
+const ArticleTemplate = ({ data, pageContext }) => (
   <Layout>
-    <Nav sticky={true} />
+    <Nav sticky={true} searchData={pageContext.searchData} />
     <Helmet title={'Gnucoop - '+data.strapiArticles.Title}
     meta={helmetMeta({
       title:       'Gnucoop - '+data.strapiArticles.Title,

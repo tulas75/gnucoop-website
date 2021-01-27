@@ -17,7 +17,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props)
     this.state = { stickyNav: false }
-    this.data = props.data
+    this.props = props
   }
 
   _handleWaypointEnter = () => {
@@ -39,7 +39,7 @@ class Index extends React.Component {
 	    />
         <Header />
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} />
-        <Nav sticky={this.state.stickyNav} />
+        <Nav sticky={this.state.stickyNav} searchData={this.props.pageContext.searchData} />
 
         <div id="main">
           <section id="who-we-are" className="main">
@@ -128,7 +128,7 @@ class Index extends React.Component {
               <h2>Latest news</h2>
             </header>
             <ul className="features">
-            {this.data.allStrapiArticles.edges.map(article => (
+            {this.props.data.allStrapiArticles.edges.map(article => (
               <li key={article.node.id}>
 		            <Link to={'/'+article.node.Slug}>
                   <span className="main image">
