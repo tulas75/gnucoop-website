@@ -138,6 +138,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/article.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -154,6 +155,7 @@ exports.createPages = ({ actions, graphql }) => {
           page: p,
           numPages,
           articlesPerPage,
+          searchData,
         },
       })
     }
@@ -164,6 +166,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/tag.js'),
         context: {
           tag: node.tag,
+          searchData,
         },
       })
     })
@@ -174,6 +177,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/partner.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -184,6 +188,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/product.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -194,6 +199,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/project.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -204,6 +210,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/solution.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -215,6 +222,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/knowledge.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
@@ -226,6 +234,7 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve('src/templates/training.js'),
         context: {
           Slug: node.Slug,
+          searchData,
         },
       })
     })
