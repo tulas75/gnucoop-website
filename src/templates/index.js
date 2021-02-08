@@ -31,12 +31,12 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title="Gnucoop - Website" 
-    meta={helmetMeta({
-      title:       'Gnucoop Website',
-      description: 'Gnucoop develops mobile and web applications to help aid organisations to easily manage their information and data.',
-    })}
-	    />
+        <Helmet title="Gnucoop - Website"
+          meta={helmetMeta({
+            title:       'Gnucoop Website',
+            description: 'Gnucoop develops mobile and web applications to help aid organisations to easily manage their information and data.',
+          })}
+	      />
         <Header />
         <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} />
         <Nav sticky={this.state.stickyNav} searchData={this.props.pageContext.searchData} />
