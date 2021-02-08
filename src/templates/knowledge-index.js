@@ -11,7 +11,7 @@ const KnowledgePage = ({ data, pageContext }) => (
       <p>Following hackers' approach</p>
     </header>
     <Helmet title="Gnucoop - Knowledges" />
-       <meta name="description" content="testo di descrizione pagina" />
+      <meta name="description" content="testo di descrizione pagina" />
     <div id="main">
       <section className="main">
         <ul className="features">
