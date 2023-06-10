@@ -6,7 +6,7 @@
   "dependencies": {
     "@tarekraafat/autocomplete.js": "^7.2.0",
     "babel-plugin-remove-graphql-queries": "^2.9.19",
-    "gatsby": "^2.30.1",
+    "gatsby": "^4.25.7",
     "gatsby-cli": "^2.17.0",
     "gatsby-image": "^2.9.0",
     "gatsby-legacy-polyfills": "^0.0.4",
